@@ -32,21 +32,22 @@
                   
                 </div>
                 <div class="col-auto d-none d-lg-block">
-                  <img :src="ruta+'/img/gobervice/6.jpg'" alt="" width="200">
+                  <img :src="ruta+'/img/gobervice/5.jpg'" alt="" width="200">
                 </div>
               </div>
             </div>
             <div class="col-md-6">
               <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-dark">
                 <div class="col p-4 d-flex flex-column position-static">
-                  <strong class="d-inline-block mb-2 text-warning">Dr. ERASMO ALEJANDRO FERNANDEZ SIXTO</strong>
+                  <strong class="d-inline-block mb-2 text-warning">PEDRO IBAN ALBORNOZ ORTEGA</strong>
                   <h3 class="mb-0 titulonot_2">VICE GOBERNADOR REGIONAL</h3>
                   
-                  <p class="card-text mb-auto titulonot_2">Vice Gobernador regional elegido mediante voluntad popular para el periodo 2019-2022</p>
+                  <!-- <p class="card-text mb-auto titulonot_2">Vice Gobernador regional elegido mediante voluntad popular para el periodo 2019-2022</p> -->
+                  <p class="card-text mb-auto titulonot_2">Vice Gobernador Regional </p>
                   
                 </div>
                 <div class="col-auto d-none d-lg-block">
-                  <img :src="ruta+'/img/gobervice/6.jpg'" alt="" width="200">
+                  <img :src="ruta+'/img/gobervice/6.jpg'" alt="" height="273">
                 </div>
               </div>
             </div>
