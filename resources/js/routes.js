@@ -26,6 +26,7 @@ import Logo from './components/paginas/Logo.vue';
 import Directorio from './components/paginas/Directorio.vue';
 import Organigrama from './components/paginas/Organigrama.vue';
 import Fag from './components/paginas/fag.vue';
+import Procompite from './components/paginas/procompite.vue';
 
 export default new Router({
     mode: 'history',
@@ -63,6 +64,10 @@ export default new Router({
         {
             path:'/organigrama',
             component:Organigrama
+        },
+        {
+            path:'/procompite',
+            component:Procompite
         },
         {
             path:'/lnormatividad/:id?/:anio?/:bus?',

@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Paginasweb;
+use App\Http\Controllers\procompite;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,3 +38,8 @@ route::get('unidad/{cod?}',[Paginasweb::class,'unidad'])->name('unidad');
 route::get('fag',[Paginasweb::class,'fag'])->name('fag');
 route::get('slider',[Paginasweb::class,'slider'])->name('slider');
 
+// PROCOMPITE
+
+route::get('provincia',[procompite::class,'provincia'])->name('provincia');
+route::get('distrito/{id}',[procompite::class,'distrito'])->name('distrito');//
+route::get('cadenaspro/{id}',[procompite::class,'cadenaspro'])->name('cadenaspro');
