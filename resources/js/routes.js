@@ -8,13 +8,14 @@ Vue.use(Router);
 // import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
-// Make BootstrapVue available throughout your project
-Vue.use(BootstrapVue)
-// Optionally install the BootstrapVue icon components plugin
-Vue.use(IconsPlugin)
+Vue.use(BootstrapVue,IconsPlugin)
 
 
-import Inicio  from './components/paginas/index.vue'
+
+
+
+
+import Inicio  from './components/paginas/index.vue';
 import Noticias from './components/paginas/Noticias.vue';
 import Allnoticias from './components/paginas/allnoticias.vue';
 import Convocatorias from './components/paginas/Convocatorias.vue';

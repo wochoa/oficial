@@ -43,3 +43,9 @@ route::get('slider',[Paginasweb::class,'slider'])->name('slider');
 route::get('provincia',[procompite::class,'provincia'])->name('provincia');
 route::get('distrito/{id}',[procompite::class,'distrito'])->name('distrito');//
 route::get('cadenaspro/{id}',[procompite::class,'cadenaspro'])->name('cadenaspro');
+
+route::post('addprocompite',[procompite::class,'addprocompite'])->name('addprocompite');
+route::get('regprocompite/{ruc}',[procompite::class,'regprocompite'])->name('regprocompite');
+
+/// cargo procompite
+route::get('rotulo/{id}',[procompite::class,'rotulo'])->name('rotulo');
