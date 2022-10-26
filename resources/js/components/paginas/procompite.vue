@@ -154,11 +154,11 @@
                                 <button class="btn btn-sm btn-primary" @click="btnbuscarruc(rucbuscar)">Buscar</button>
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <a v-if="idregistro" :href="ruta+'/api/rotulo/'+idregistro" class="btn btn-danger btn-sm" target="_blank">Descargar rotulado</a>
+                        <div class="form-group row" v-if="idregistro">
+                            <a  :href="ruta+'/api/rotulo/'+idregistro" class="btn btn-danger btn-sm" target="_blank">Descargar rotulado</a>
                         </div>
-                        <div class="form-group row">
-                            <iframe v-if="idregistro" :src="ruta+'/api/rotulo/'+idregistro" frameborder="0" style="display:block; height:60vh;"></iframe>
+                        <div class="form-group row" v-if="idregistro">
+                            <iframe  :src="ruta+'/api/rotulo/'+idregistro" frameborder="0" style="display:block; height:60vh;"></iframe>
                         </div>
                     </div>
                 </div>
@@ -200,7 +200,7 @@
                                     <td><i class="fa-sharp fa-solid fa-check"></i></td>
                                     <td><i class="fa-sharp fa-solid fa-check"></i></td>
                                     <td>Adjuntar en SIPROCOMPITE</td>
-                                    <td><a href="https://docs.google.com/document/d/1YTdfMkw7FojvDhtVBR-zzypAhr3dleEP/edit?usp=sharing&ouid=109797952726799304603&rtpof=true&sd=true">ANEXO Nº 03</a></td>
+                                    <td><a href="https://docs.google.com/document/d/1v6GqJHrOKgJPS_W_aNc_qMj5Md2TDNpo/edit?usp=sharing&ouid=109797952726799304603&rtpof=true&sd=true">ANEXO Nº 03</a></td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
