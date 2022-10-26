@@ -25,7 +25,7 @@
 
         <div class="row">
 
-            <div class="col-sm-8">
+            <div class="col-sm-7">
                 <div class="card">
                     <!-- Loading (remove the following to stop the loading)-->
                     <!-- <div class="overlay dark">
@@ -141,7 +141,7 @@
 
                 </div>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-5">
                 <div class="card">
                     <div class="card-header">
                         DESCARGAR ROTULADO DE INSCRIPCIÓN
@@ -159,6 +159,162 @@
                         </div>
                         <div class="form-group row">
                             <iframe v-if="idregistro" :src="ruta+'/api/rotulo/'+idregistro" frameborder="0" style="display:block; height:60vh;"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        REQUISITOS Y BASES
+                    </div>
+                    <div class="card-body">
+                        <h5>REQUISITOS PARA EL REGISTRO DE PARTICIPANTES-PROCOMPITE REGIONAL 2022</h5>
+                        <table border="1" width="100%" style="font-size: 12px;">
+                            <thead class="bg-info">
+                                <tr>
+                                    <td rowspan="2">N°</td>
+                                    <td rowspan="2">Requisitos</td>
+                                    <td colspan="3">Categorías</td>
+                                    <td rowspan="2">Observación</td>
+                                    <td rowspan="2">ANEXO</td>
+                                </tr>
+                                <tr>
+                                    <td>A</td>
+                                    <td>B</td>
+                                    <td>C</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Vigencia de poder con antigüedad no mayor a 30 días.</td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td>Adjuntar en SIPROCOMPITE</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Declaración jurada de trabajo conjunto y aporte del AEO</td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td>Adjuntar en SIPROCOMPITE</td>
+                                    <td><a href="https://docs.google.com/document/d/1YTdfMkw7FojvDhtVBR-zzypAhr3dleEP/edit?usp=sharing&ouid=109797952726799304603&rtpof=true&sd=true">ANEXO Nº 03</a></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Informe de opinión favorable, si la AEO ya fue beneficiaria del PROCOMPITE del GR/GL</td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td>Adjuntar en SIPROCOMPITE (opcional)</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Declaración jurada de antecedentes del representante legal del AEO. Adjuntar constancia y/o Certificado.</td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td>Adjuntar en SIPROCOMPITE</td>
+                                    <td><a href="https://docs.google.com/document/d/1AHAL5z2_6mmfMU5uCwQOnO11LtSKDvkX/edit?usp=sharing&ouid=109797952726799304603&rtpof=true&sd=true">ANEXO Nº 04</a></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Copias de DNI de los miembros del AEO</td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td>Adjuntar en SIPROCOMPITE</td>
+                                    <td><a href="https://docs.google.com/document/d/1ckrhu1IVc5nbxGF_pgOGYNoH3BYp8OLW/edit?usp=sharing&ouid=109797952726799304603&rtpof=true&sd=true">ANEXO Nº 08</a></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Resolución o carnet emitida por CONADIS (en caso de contar con miembro con discapacidad)</td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td>Adjuntar en SIPROCOMPITE (opcional)</td>
+                                    <td><a href="https://docs.google.com/document/d/1ckrhu1IVc5nbxGF_pgOGYNoH3BYp8OLW/edit?usp=sharing&ouid=109797952726799304603&rtpof=true&sd=true">ANEXO Nº 08</a></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Condición de Activo y habido del AEO</td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td>VERIFICADO POR EL COMITE</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>¿Se verifico que los miembros del AEO no participan en otro plan de negocio presentado a PROCOMPITE?</td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td>VERIFICADO POR EL COMITE</td>
+                                    <td><a href="https://docs.google.com/document/d/1ckrhu1IVc5nbxGF_pgOGYNoH3BYp8OLW/edit?usp=sharing&ouid=109797952726799304603&rtpof=true&sd=true">ANEXO Nº 08</a></td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>¿Máximo 01 directivo del AEO se encuentra con calificación “A perdida” en el sistema financiero nacional?</td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td>VERIFICADO POR EL COMITE</td>
+                                    <td><a href="https://docs.google.com/document/d/1UspLLIxmNwMtvq7pwJK3Nli0rJ9ZUI5F/edit?usp=sharing&ouid=109797952726799304603&rtpof=true&sd=true">ANEXO Nº 05</a></td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>¿La condición de los socios del AEO que se encuentran con calificación “A perdida” en el sistema financiero nacional, este es máximo un 30%?</td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td>VERIFICADO POR EL COMITE</td>
+                                    <td><a href="https://docs.google.com/document/d/1UspLLIxmNwMtvq7pwJK3Nli0rJ9ZUI5F/edit?usp=sharing&ouid=109797952726799304603&rtpof=true&sd=true">ANEXO Nº 05</a></td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>¿La cadena productiva está alineado con el informe de priorización y/o planes de desarrollo concertad u otras herramientas estratégicas sectoriales?</td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td>VERIFICADO POR EL COMITE</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>Fecha de inscripción en Registros Públicos para acreditar al menos, un año de existencia.</td>
+                                    <td></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td>VERIFICADO POR EL COMITE</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>Declaración Jurada Anual de Renta de los 02 últimos años</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td>Adjuntar en SIPROCOMPITE</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>Solicitud de Cofinanciamiento (participación)</td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td><i class="fa-sharp fa-solid fa-check"></i></td>
+                                    <td>VERIFICADO POR EL COMITE</td>
+                                    <td><a href="https://docs.google.com/document/d/1I31TNHLRTLzoGVDp6vnv6zZCsifAdtCQ/edit?usp=sharing&ouid=109797952726799304603&rtpof=true&sd=true">ANEXO Nº 06</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="alert alert-success mt-3" role="alert">
+                            <b>NOTA: </b> Al momento de cargar en el SIPROCOMPITE la documentación, considerar que los documentos de los puntos 6,8,9 y 10, se deben colocar como adjuntos en el archivo del punto “5. Copias de DNI de los miembros del AEO
                         </div>
                     </div>
                 </div>
@@ -335,7 +491,7 @@ export default {
                 })
                 .catch(error => {
                     this.idregistro = ''
-                        })
+                })
 
         },
 
@@ -363,5 +519,12 @@ export default {
 <style lang="css" scoped>
 .textmayuscula {
     text-transform: uppercase;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
 }
 </style>
