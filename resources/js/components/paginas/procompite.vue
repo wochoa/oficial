@@ -24,151 +24,17 @@
     <div class="container pt-3 ">
 
         <div class="row">
-
-            <div class="col-sm-7">
-                <div class="card">
-                    <!-- Loading (remove the following to stop the loading)-->
-                    <!-- <div class="overlay dark">
-                        <i class="fas fa-3x fa-sync-alt fa-spin"></i>
-                    </div> -->
-
-                    <div class="card-header">
-                        FOIRMULARIO DE INSCRIPCION
-                    </div>
-                    <div class="card-body">
-
-                        <div class="form-group row">
-                            <div class="col-sm-2">
-                                <select v-model="tipodoc" class="form-control form-control-sm">
-                                    <!-- <option value=''>selec....RUC</option> -->
-                                    <!-- <option value=1>DNI</option> -->
-                                    <option value=2>RUC</option>
-                                </select>
-                            </div>
-                            <div class="col-sm-3">
-                                <!-- <input type="number" class="form-control form-control-sm" placeholder="Ingrese el número" autofocus v-model="numdoc" @keyup.enter="validarnumero"> -->
-                                <input type="number" class="form-control form-control-sm" placeholder="Ingrese el número" autofocus v-model="numdoc">
-                            </div>
-                            <!-- <div class="col-sm-2">
-                                <button class="btn btn-primary btn-sm" v-loading.fullscreen.lock="fullscreenLoading" @click="validarnumero">Validar</button>
-                            </div> -->
-                            <div class="col-sm-7">
-                                <input type="text" class="form-control form-control-sm textmayuscula" placeholder="Razon social" v-model="nombresyape">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="" class="col-sm-3">Seleccione la categoria:</label>
-                            <div class="col-sm-9">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="radio1" value="CATEGORIA A" v-model="categoria" checked>
-                                    <label class="form-check-label pr-5">CATEGORIA A</label>
-
-                                    <input class="form-check-input " type="radio" name="radio1" value="CATEGORIA B" v-model="categoria">
-                                    <label class="form-check-label pr-5">CATEGORIA B</label>
-
-                                    <input class="form-check-input " type="radio" name="radio1" value="CATEGORIA C" v-model="categoria">
-                                    <label class="form-check-label ">CATEGORIA C</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-4">
-                                <label for="">Provincia</label>
-                                <select class="form-control form-control-sm" v-model="idprovincia" required @change="cargadistrito">
-                                    <template v-for="pro in provi">
-                                        <option :value="pro.idProv">{{pro.provincia}}</option>
-                                    </template>
-
-                                </select>
-                            </div>
-                            <div class="col-sm-4">
-                                <label for="">Distrito</label>
-                                <select name="" id="" class="form-control form-control-sm" v-model="iddistrito" required>
-                                    <template v-for="dis in distri">
-                                        <option :value="dis.distrito">{{dis.distrito}}</option>
-                                    </template>
-                                </select>
-                            </div>
-                            <div class="col-sm-4">
-                                <label for="">Dirección</label>
-                                <input type="text" placeholder="Ingrese su dirección" class="form-control form-control-sm textmayuscula" v-model="direccion">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="">Título de la propuesta productiva(Plan de negocios)</label>
-                            <input type="text" name="" id="" class="form-control form-control-sm textmayuscula" placeholder="Ingrese el título de la propuesta" v-model="titulo_propuesta">
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="">Cadena productiva</label>
-                            <select name="" id="" class="form-control form-control-sm" v-model="tectcadena">
-                                <template v-for="cad in cadenas">
-                                    <option :value="cad.cadena_productiva">{{cad.cadena_productiva}}</option>
-                                </template>
-                            </select>
-                        </div>
-                        <h4 class="text-danger">PERSONA DE CONTACTO</h4>
-                        <div class="form-group row">
-                            <label for="" class="col-sm-2">DNI</label>
-                            <div class="col-sm-3">
-                                <input type="number" class="form-control form-control-sm " placeholder="Ingresar número dni" v-model="dnicontacto">
-                            </div>
-                            <div class="col-sm-7">
-                                <input type="text" class="form-control form-control-sm textmayuscula" placeholder="Nombres y apellidos" v-model="nomcontacto">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-4">
-                                <label for="">Telefono fijo</label>
-                                <input type="number" class="form-control form-control-sm" v-model="fijo">
-                            </div>
-                            <div class="col-sm-4">
-                                <label for="">Celular</label>
-                                <input type="number" class="form-control form-control-sm" v-model="cel">
-                            </div>
-                            <div class="col-sm-4">
-                                <label for="">Correo electrónico</label>
-                                <input type="email" class="form-control form-control-sm" pattern=".+@globex\.com" placeholder="Ingresar su correo" v-model="correo">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card-footer clearfix">
-                        <button class="btn btn-primary btn-sm" @click="registrarins" v-loading.fullscreen.lock="fullscreenLoading">Enviar inscripción</button>
-                    </div>
-
-                </div>
-            </div>
-            <div class="col-sm-5">
+            <div class="col-sm-6">
+                
                 <div class="card">
                     <div class="card-header">
-                        DESCARGAR ROTULADO DE INSCRIPCIÓN
+                        REQUISITOS Y BASES DE CONCURSO PROCOMPITE 2022
                     </div>
                     <div class="card-body">
-                        <div class="form-group row border-bottom pb-2">
-                            <label for="" class="col-sm-3">RUC:</label>
-                            <div class="col-sm-7"><input type="numbre" class="form-control form-control-sm mayusculas" placeholder="Ingrese dni/ruc" v-model="rucbuscar"></div>
-                            <div class="col-2">
-                                <button class="btn btn-sm btn-primary" @click="btnbuscarruc(rucbuscar)">Buscar</button>
-                            </div>
-                        </div>
-                        <div class="form-group row" v-if="idregistro">
-                            <a  :href="ruta+'/api/rotulo/'+idregistro" class="btn btn-danger btn-sm" target="_blank">Descargar rotulado</a>
-                        </div>
-                        <div class="form-group row" v-if="idregistro">
-                            <iframe  :src="ruta+'/api/rotulo/'+idregistro" frameborder="0" style="display:block; height:60vh;"></iframe>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-header">
-                        REQUISITOS Y BASES
-                    </div>
-                    <div class="card-body">
-                        <h5>REQUISITOS PARA EL REGISTRO DE PARTICIPANTES-PROCOMPITE REGIONAL 2022</h5>
-                        <table border="1" width="100%" style="font-size: 12px;">
+                        <p>Bases de concurso Procompite 2022  <span class="badge bg-warning float-right"><a href="https://drive.google.com/file/d/1oDyi7JW5HxqxTz4J_0yVFpKF_tNOjiEE/view?usp=sharing" class="text-decoration-none">Descargar</a></span></p>
+                        <p>Proceso de registro de las AEO <span class="badge bg-warning float-right" ><a href="https://drive.google.com/file/d/1c2SN8gjnVEmQdxPkAbSItz3Uq3Eqmg0z/view?usp=sharing" class="text-decoration-none">Descargar</a></span></p>
+                        <h5 style="text-align: center;">REQUISITOS PARA EL REGISTRO DE PARTICIPANTES-PROCOMPITE REGIONAL 2022</h5>
+                        <table border="1" width="100%" style="font-size: 12px;" >
                             <thead class="bg-info">
                                 <tr>
                                     <td rowspan="2">N°</td>
@@ -312,11 +178,147 @@
                                 </tr>
                             </tbody>
                         </table>
-                        
+
                         <div class="alert alert-success mt-3" role="alert">
                             <b>NOTA: </b> Al momento de cargar en el SIPROCOMPITE la documentación, considerar que los documentos de los puntos 6,8,9 y 10, se deben colocar como adjuntos en el archivo del punto “5. Copias de DNI de los miembros del AEO
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-header">
+                        DESCARGAR ROTULADO DE INSCRIPCIÓN
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group row border-bottom pb-2">
+                            <label for="" class="col-sm-3">RUC:</label>
+                            <div class="col-sm-7"><input type="numbre" class="form-control form-control-sm mayusculas" placeholder="Ingrese dni/ruc" v-model="rucbuscar"></div>
+                            <div class="col-2">
+                                <button class="btn btn-sm btn-primary" @click="btnbuscarruc(rucbuscar)">Buscar</button>
+                            </div>
+                        </div>
+                        <div class="form-group row" v-if="idregistro">
+                            <a :href="ruta+'/api/rotulo/'+idregistro" class="btn btn-danger btn-sm" target="_blank">Descargar rotulado</a>
+                        </div>
+                        <div class="form-group row" v-if="idregistro">
+                            <iframe :src="ruta+'/api/rotulo/'+idregistro" frameborder="0" style="display:block; height:60vh;"></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <!-- Loading (remove the following to stop the loading)-->
+                    <!-- <div class="overlay dark">
+                        <i class="fas fa-3x fa-sync-alt fa-spin"></i>
+                    </div> -->
+
+                    <div class="card-header">
+                        FOIRMULARIO DE INSCRIPCION
+                    </div>
+                    <div class="card-body">
+
+                        <div class="form-group row">
+                            <div class="col-sm-2">
+                                <select v-model="tipodoc" class="form-control form-control-sm">
+                                    <!-- <option value=''>selec....RUC</option> -->
+                                    <!-- <option value=1>DNI</option> -->
+                                    <option value=2>RUC</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-3">
+                                <!-- <input type="number" class="form-control form-control-sm" placeholder="Ingrese el número" autofocus v-model="numdoc" @keyup.enter="validarnumero"> -->
+                                <input type="number" class="form-control form-control-sm" placeholder="Ingrese el número" autofocus v-model="numdoc">
+                            </div>
+                            <!-- <div class="col-sm-2">
+                                <button class="btn btn-primary btn-sm" v-loading.fullscreen.lock="fullscreenLoading" @click="validarnumero">Validar</button>
+                            </div> -->
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control form-control-sm textmayuscula" placeholder="Razon social" v-model="nombresyape">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="" class="col-sm-3">Seleccione la categoria:</label>
+                            <div class="col-sm-9">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="radio1" value="CATEGORIA A" v-model="categoria" checked>
+                                    <label class="form-check-label pr-5">CATEGORIA A</label>
+
+                                    <input class="form-check-input " type="radio" name="radio1" value="CATEGORIA B" v-model="categoria">
+                                    <label class="form-check-label pr-5">CATEGORIA B</label>
+
+                                    <input class="form-check-input " type="radio" name="radio1" value="CATEGORIA C" v-model="categoria">
+                                    <label class="form-check-label ">CATEGORIA C</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-4">
+                                <label for="">Provincia</label>
+                                <select class="form-control form-control-sm" v-model="idprovincia" required @change="cargadistrito">
+                                    <template v-for="pro in provi">
+                                        <option :value="pro.idProv">{{pro.provincia}}</option>
+                                    </template>
+
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="">Distrito</label>
+                                <select name="" id="" class="form-control form-control-sm" v-model="iddistrito" required>
+                                    <template v-for="dis in distri">
+                                        <option :value="dis.distrito">{{dis.distrito}}</option>
+                                    </template>
+                                </select>
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="">Dirección</label>
+                                <input type="text" placeholder="Ingrese su dirección" class="form-control form-control-sm textmayuscula" v-model="direccion">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="">Título de la propuesta productiva(Plan de negocios)</label>
+                            <input type="text" name="" id="" class="form-control form-control-sm textmayuscula" placeholder="Ingrese el título de la propuesta" v-model="titulo_propuesta">
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="">Cadena productiva</label>
+                            <select name="" id="" class="form-control form-control-sm" v-model="tectcadena">
+                                <template v-for="cad in cadenas">
+                                    <option :value="cad.cadena_productiva">{{cad.cadena_productiva}}</option>
+                                </template>
+                            </select>
+                        </div>
+                        <h4 class="text-danger">PERSONA DE CONTACTO</h4>
+                        <div class="form-group row">
+                            <label for="" class="col-sm-2">DNI</label>
+                            <div class="col-sm-3">
+                                <input type="number" class="form-control form-control-sm " placeholder="Ingresar número dni" v-model="dnicontacto">
+                            </div>
+                            <div class="col-sm-7">
+                                <input type="text" class="form-control form-control-sm textmayuscula" placeholder="Nombres y apellidos" v-model="nomcontacto">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-4">
+                                <label for="">Telefono fijo</label>
+                                <input type="number" class="form-control form-control-sm" v-model="fijo">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="">Celular</label>
+                                <input type="number" class="form-control form-control-sm" v-model="cel">
+                            </div>
+                            <div class="col-sm-4">
+                                <label for="">Correo electrónico</label>
+                                <input type="email" class="form-control form-control-sm" pattern=".+@globex\.com" placeholder="Ingresar su correo" v-model="correo">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer clearfix">
+                        <button class="btn btn-primary btn-sm" @click="registrarins" v-loading.fullscreen.lock="fullscreenLoading">Enviar inscripción</button>
+                    </div>
+
                 </div>
             </div>
 
