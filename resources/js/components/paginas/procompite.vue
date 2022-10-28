@@ -35,6 +35,12 @@
                         <p>Proceso de registro de las AEO <span class="badge bg-warning float-right" ><a href="https://drive.google.com/file/d/1c2SN8gjnVEmQdxPkAbSItz3Uq3Eqmg0z/view?usp=sharing" class="text-decoration-none">Descargar</a></span></p>
                         <p>FORMATO Nro10 - CONTENIDOS MÍNIMOS DE PLAN DE NEGOCIO  V 1.0 <span class="badge bg-warning float-right" ><a href="https://docs.google.com/document/d/1TsNoR1cI3jdeGwErBO5GbfjOnTBB2dO9/edit?usp=sharing&ouid=109797952726799304603&rtpof=true&sd=true" class="text-decoration-none">Descargar</a></span></p>
 
+                        <p>ANEXO N.°1 - REGISTRO DE PARTICIPANTES DEL CONCURSO PROCOMPITE <span class="badge bg-danger float-right" ><a href="https://docs.google.com/document/d/1b7GbPu6Jvhpz25hHCtbHT2ttrUNOBgol/edit?usp=sharing&ouid=109797952726799304603&rtpof=true&sd=true" class="text-decoration-none">Descargar</a></span></p>
+
+                        <p>ANEXO N.°2 - PRESENTACIÓN DE CONSULTA A LAS BASES <span class="badge bg-danger float-right" ><a href="https://docs.google.com/document/d/1NcX-zm-_CXEJfFWuUIFW2qVqoWbjv-9X/edit?usp=sharing&ouid=109797952726799304603&rtpof=true&sd=true" class="text-decoration-none">Descargar</a></span></p>
+
+                        <p>ANEXO N.°7 - LISTADO DE BIENES VALORIZADOS <span class="badge bg-danger float-right" ><a href="https://docs.google.com/document/d/1YTdfMkw7FojvDhtVBR-zzypAhr3dleEP/edit?usp=sharing&ouid=109797952726799304603&rtpof=true&sd=true" class="text-decoration-none">Descargar</a></span></p>
+
                         <h5 style="text-align: center;">REQUISITOS PARA EL REGISTRO DE PARTICIPANTES-PROCOMPITE REGIONAL 2022</h5>
                         <table border="1" width="100%" style="font-size: 12px;" >
                             <thead class="bg-info">
