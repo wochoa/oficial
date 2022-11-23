@@ -38,6 +38,9 @@ route::get('unidad/{cod?}',[Paginasweb::class,'unidad'])->name('unidad');
 route::get('fag',[Paginasweb::class,'fag'])->name('fag');
 route::get('slider',[Paginasweb::class,'slider'])->name('slider');
 
+// temas
+route::get('tema',[Paginasweb::class,'tema'])->name('tema');
+
 // PROCOMPITE
 
 route::get('provincia',[procompite::class,'provincia'])->name('provincia');

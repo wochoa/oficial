@@ -58,7 +58,7 @@ body::-webkit-scrollbar-track:active {
 <body class="layout-top-nav layout-navbar-fixed text-sm">
   <div class="wrapper" id="app">
   
-    <App ruta="{{ route('baseruta') }}">
+    <App ruta="{{ route('baseruta') }}" tema="{{route('tema')}}">
         @yield('content')
     </App>
   

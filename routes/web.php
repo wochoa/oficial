@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Paginasweb;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,9 +17,10 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+route::get('/{any?}',[Paginasweb::class,'index'])->name('baseruta')->where('any','.*');
 
 
-Route::get('/{any?}', function () {
-    return view('portal');
-})->name('baseruta')
-    ->where('any','.*');
+// Route::get('/{any?}', function () {
+//     return view('portal');
+// })->name('baseruta')
+//     ->where('any','.*');
