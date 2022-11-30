@@ -40,7 +40,7 @@ class Paginasweb extends Controller
         $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->value('iddirecciones_web');
         $iddireccionweb=$portalesweb;//id de pagina web
 
-        $proceso=DB::table('cas_proceso_seleccion')->where('iddireccionweb',$iddireccionweb)->orderBy('id_proc_sel_cas','DESC')->get();
+        $proceso=DB::table('cas_proceso_seleccion')->where(['iddireccionweb'=>$iddireccionweb,'cas_proc_sel_estado'=>1])->orderBy('id_proc_sel_cas','DESC')->get();
         $i=1;
         $archivos=DB::table('archivo_sel_cas')->join('cas_proceso_seleccion','archivo_sel_cas.id_proceso_selec','=','cas_proceso_seleccion.id_proc_sel_cas')->where('iddireccionweb',$iddireccionweb)->select('idarchivo_sel_cas','nom_archivo','url_archivo','archivo_sinurl','etapa','id_proceso_selec')->orderBy('idarchivo_sel_cas','ASC')->get();
         foreach($proceso as $itemproc)
