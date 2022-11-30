@@ -75,7 +75,7 @@ export default {
     data() {
         return {
             listadoconvocatroias: {},
-            result: 1
+            result: 0
         }
     },
     props: [],
