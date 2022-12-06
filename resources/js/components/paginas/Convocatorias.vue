@@ -60,8 +60,15 @@
                 </table>
             </div>
         </div>
-        <div v-else>
-          No hay convocatorias vigentes por el momento
+        <div class="card mt-6" v-else>
+            <div class="card-header bg-secondary text-white">
+                Listado de convocatorias
+            </div>
+
+          <div class="card-body">
+            
+            <h4>No hay convocatorias vigentes por el momento</h4>
+          </div>
         </div>
     </div>
 </div>
