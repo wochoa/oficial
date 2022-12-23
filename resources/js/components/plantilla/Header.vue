@@ -5,7 +5,7 @@
                 <!-- <a class="navbar-brand" href="/">
                     Laravel
                 </a> -->
-                <router-link to="/" class="navbar-brand">
+                <router-link to="/" class="navbar-brand" >
                   <img :src="ruta+'./../img/logo.png'" alt="" height="40">
                </router-link>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,7 +59,7 @@
             <!-- <a href="/pagina/103" class="nav-link active" target="_blank"><i class="fa fa-envelope"></i> Mesa de Partes Virtual Direcciones y Unidades</a> -->
             <router-link :to="'/pagina/103'" class="nav-link active"><i class="fa fa-envelope"></i> Mesa de Partes Virtual Direcciones y Unidades</router-link>
             </div>
-            <div class="col-md-2"><a class="nav-link active">Central teléfonica <i class="fa fa-phone-volume"></i> +51 (062) 51-2124</a></div>
+            <div class="col-md-2"><!-- <a class="nav-link active">Central teléfonica <i class="fa fa-phone-volume"></i> +51 (062) 51-2124</a>--></div>
             <div class="col-md-2"><a class="nav-link active" href="https://mail.regionhuanuco.gob.pe/"><i class="fa fa-envelope"></i> Correo Institucional</a></div>
             <div class="col-md-2" align="right"><a class="nav-link active" href="http://www.transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=10146#.WcqzcWjWyUk"><img src="http://www.regionhuanuco.gob.pe/img/portal.png" alt="" height="30"></a></div>
             

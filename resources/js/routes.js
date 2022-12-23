@@ -13,7 +13,7 @@ Vue.use(BootstrapVue,IconsPlugin)
 
 
 
-
+import Gobpe  from './components/paginas/gobpe.vue';
 
 import Inicio  from './components/paginas/index.vue';
 import Noticias from './components/paginas/Noticias.vue';
@@ -32,9 +32,19 @@ import Procompite from './components/paginas/procompite.vue';
 export default new Router({
     mode: 'history',
     routes:[
-        {//   id:0,
+        // {//   id:0,
+        //     path:'/',
+        //     name:'home',
+        //     component:Gobpe 
+        // },
+        // {//   id:0,
+        //     path:'/home',
+        //     name:'index',
+        //     component:Inicio 
+        // },
+         {
             path:'/',
-            name:'index',
+            name:'home',
             component:Inicio 
         },
         {
