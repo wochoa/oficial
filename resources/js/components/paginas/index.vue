@@ -229,7 +229,7 @@
                              <div>
                               Responsable de acceso a la información
                                 <br>
-                                <h6>Lic. Norma Toledo Minaya de Salazar</h6>
+                                <h6>ABOG. JUAN PEDRO OLIVEROS DENEGRI</h6>
                              </div>
                              <br>
                        </td>
