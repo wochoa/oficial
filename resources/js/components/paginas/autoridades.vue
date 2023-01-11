@@ -70,7 +70,7 @@
                                     <div class="row">
                                         <div class="col-7">
                                             <h2 class="lead"><b>ING. MILTON SOTO SOTO</b></h2>
-                                            <p class="text-muted text-sm"><b>GERENCIA REGIONAL DE INFRAESTRUTURA: </b> -</p>
+                                            <p class="text-muted text-sm"><b>GERENCIA GENERAL REGIONAL: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-muted">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>xxxxxx</li>
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
