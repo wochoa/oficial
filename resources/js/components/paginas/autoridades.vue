@@ -64,13 +64,13 @@
                         <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
                             <div class="card bg-light">
                                 <div class="card-header text-muted border-bottom-0">
-                                    <!-- {{-- PROVINCIA HUÁNUCO --}} -->
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
                                 </div>
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
                                             <h2 class="lead"><b>ING. MILTON SOTO SOTO</b></h2>
-                                            <p class="text-muted text-sm"><b>GERENCIA GENERAL REGIONAL: </b> -</p>
+                                            <p class="text-muted text-sm"><b>GERENTE GENERAL REGIONAL: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-muted">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>xxxxxx</li>
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
@@ -94,13 +94,13 @@
                         <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
                             <div class="card bg-light">
                                 <div class="card-header text-muted border-bottom-0">
-                                    <!-- {{-- PROVINCIA HUÁNUCO --}} -->
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
                                 </div>
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
                                             <h2 class="lead"><b>ABOG. JORGE RAUL OYARCE ESTRELLA</b></h2>
-                                            <p class="text-muted text-sm"><b>GERENCIA REGIONAL DE ASESORIA JURIDICA: </b> -</p>
+                                            <p class="text-muted text-sm"><b>GERENTE REGIONAL DE ASESORIA JURIDICA: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-muted">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>xxxxxx</li>
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
@@ -124,13 +124,13 @@
                         <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
                             <div class="card bg-light">
                                 <div class="card-header text-muted border-bottom-0">
-                                    <!-- {{-- PROVINCIA HUÁNUCO --}} -->
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
                                 </div>
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
                                             <h2 class="lead"><b>ECON. NELSON CÁRDENAS OJEDA</b></h2>
-                                            <p class="text-muted text-sm"><b>GERENCIA REGIONAL DE PLANEAMIENTO, PRESUPUESTO Y ACONDICIONAMIENTO TERRITORIAL: </b> -</p>
+                                            <p class="text-muted text-sm"><b>GERENTE REGIONAL DE PLANEAMIENTO, PRESUPUESTO Y ACONDICIONAMIENTO TERRITORIAL: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-muted">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>xxxxxx</li>
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
@@ -154,13 +154,13 @@
                         <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
                             <div class="card bg-light">
                                 <div class="card-header text-muted border-bottom-0">
-                                    <!-- {{-- PROVINCIA HUÁNUCO --}} -->
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
                                 </div>
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
                                             <h2 class="lead"><b>ING. TITO JOSIP JAIME HIDALGO</b></h2>
-                                            <p class="text-muted text-sm"><b>GERENCIA REGIONAL DE DESARROLLO ECONOMICO: </b> -</p>
+                                            <p class="text-muted text-sm"><b>GERENTE REGIONAL DE DESARROLLO ECONOMICO: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-muted">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>xxxxxx</li>
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
@@ -184,13 +184,13 @@
                         <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
                             <div class="card bg-light">
                                 <div class="card-header text-muted border-bottom-0">
-                                    <!-- {{-- PROVINCIA HUÁNUCO --}} -->
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
                                 </div>
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
                                             <h2 class="lead"><b>CPC. EDWING EDY MENDOZA VELEZ DE VILLA</b></h2>
-                                            <p class="text-muted text-sm"><b>GERENCIA REGIONAL DE ADMINISTRACION: </b> -</p>
+                                            <p class="text-muted text-sm"><b>GERENTE REGIONAL DE ADMINISTRACION: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-muted">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>xxxxxx</li>
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
@@ -214,13 +214,13 @@
                         <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
                             <div class="card bg-light">
                                 <div class="card-header text-muted border-bottom-0">
-                                    <!-- {{-- PROVINCIA HUÁNUCO --}} -->
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
                                 </div>
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
                                             <h2 class="lead"><b>ING. JUAN TOMAS DEZA FALCON</b></h2>
-                                            <p class="text-muted text-sm"><b>GERENCIA REGIONAL DE RECURSOS NATURALES Y GESTION AMBIENTAL: </b> -</p>
+                                            <p class="text-muted text-sm"><b>GERENTE REGIONAL DE RECURSOS NATURALES Y GESTION AMBIENTAL: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-muted">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>xxxxxx</li>
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
@@ -244,13 +244,13 @@
                         <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
                             <div class="card bg-light">
                                 <div class="card-header text-muted border-bottom-0">
-                                    <!-- {{-- PROVINCIA HUÁNUCO --}} -->
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
                                 </div>
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
                                             <h2 class="lead"><b>ECON. ALDO FERNANDO REYES VIVIANO</b></h2>
-                                            <p class="text-muted text-sm"><b>GERENCIA REGIONAL DE DESARROLLO SOCIAL: </b> -</p>
+                                            <p class="text-muted text-sm"><b>GERENTE REGIONAL DE DESARROLLO SOCIAL: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-muted">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>xxxxx</li>
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxxx</li>
@@ -274,13 +274,13 @@
                         <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
                             <div class="card bg-light">
                                 <div class="card-header text-muted border-bottom-0">
-                                    <!-- {{-- PROVINCIA HUÁNUCO --}} -->
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
                                 </div>
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
                                             <h2 class="lead"><b>ING. DANIEL ENRIQUE HIDALGO LEDESMA</b></h2>
-                                            <p class="text-muted text-sm"><b>GERENCIA REGIONAL DE INFRAESCTRUCTURA: </b> -</p>
+                                            <p class="text-muted text-sm"><b>GERENTE REGIONAL DE INFRAESCTRUCTURA: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-muted">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>dhidalgo@regionhuanuco.gob.pe</li>
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: 982191307</li>
