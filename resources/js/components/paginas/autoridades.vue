@@ -42,15 +42,16 @@
             <div class="col-md-6">
                 <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-dark">
                     <div class="col p-4 d-flex flex-column position-static">
-                        <strong class="d-inline-block mb-2 text-warning">.....................</strong>
-                        <h3 class="mb-0 titulonot_2">.................</h3>
+                        <strong class="d-inline-block mb-2 text-warning">JUAN SIVORI PAREDES RIOS</strong>
+                        <h3 class="mb-0 titulonot_2">Vice Gobernador Regional</h3>
 
                         <!-- <p class="card-text mb-auto titulonot_2">Vice Gobernador regional elegido mediante voluntad popular para el periodo 2019-2022</p> -->
                         <p class="card-text mb-auto titulonot_2">Vice Gobernador Regional </p>
+                        <p class="card-text mb-auto titulonot_2">Resolución N° 0011-2023, emitida por el Jurado Nacional de Elecciones, fue reconocido como el vicegobernador para el periodo 2023-2026</p>
 
                     </div>
                     <div class="col-auto d-none d-lg-block">
-                        <img :src="ruta+'/img/gober2023/foto-incognito.jpg'" alt="" height="273">
+                        <img :src="ruta+'/img/consejeros2023/01ptoinca.jpg'" alt="" height="273">
                     </div>
                 </div>
             </div>
