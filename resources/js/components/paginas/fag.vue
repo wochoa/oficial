@@ -130,7 +130,7 @@ import LaravelVuePagination from 'laravel-vue-pagination';
           case '09': var nom_mes='SETIEMBRE'; break;
           case '10': var nom_mes='OCTUBRE'; break;
           case '11': var nom_mes='NOVIEMBRE'; break;
-          case '12': var nom_mes='DOCIEMBRE'; break;
+          case '12': var nom_mes='DICIEMBRE'; break;
         }
         return nom_mes;
       }
