@@ -77,7 +77,7 @@
                                     <div v-html="sec3.titulo">
 
                                     </div>
-                                    <a href="https://drive.google.com/file/d/1vy3Ckvxqrx3I3ABJIGx1twMuMiZTWmeL/view?usp=sharing" class="titulonot_2 text-warning" target="_blank">
+                                    <a :href="sec3.enlace" class="titulonot_2 text-warning" target="_blank">
                                         {{ sec3.texto_enlace }} <i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a>
                                 </div>
 
