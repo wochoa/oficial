@@ -145,7 +145,7 @@
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="lead"><b>ECON. NELSON CÁRDENAS OJEDA</b></h2>
+                                            <h2 class="lead"><b>ECON. CESAR EUCLIDES BERNARDO HILARIO</b></h2>
                                             <p class="text-muted text-sm"><b>GERENTE REGIONAL DE PLANEAMIENTO, PRESUPUESTO Y ACONDICIONAMIENTO TERRITORIAL: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-muted">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>xxxxxx</li>
@@ -153,7 +153,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-5 text-center">
-                                            <img :src="ruta+'/img/gerentes/3.png'" alt="" class="img-circle img-fluid">
+                                            <img :src="ruta+'/img/gerentes/0.jpg'" alt="" class="img-circle img-fluid">
                                         </div>
                                     </div>
                                 </div>
@@ -295,15 +295,15 @@
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="lead"><b>ING. DANIEL ENRIQUE HIDALGO LEDESMA</b></h2>
+                                            <h2 class="lead"><b>ING. DANIEL MALLQUI ESTACIO</b></h2>
                                             <p class="text-muted text-sm"><b>GERENTE REGIONAL DE INFRAESCTRUCTURA: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-muted">
-                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>dhidalgo@regionhuanuco.gob.pe</li>
-                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: 982191307</li>
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>DME_1978@HOTMAIL.COM</li>
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
                                             </ul>
                                         </div>
                                         <div class="col-5 text-center">
-                                            <img :src="ruta+'/img/gerentes/8.png'" alt="" class="img-circle img-fluid">
+                                            <img :src="ruta+'/img/gerentes/0.jpg'" alt="" class="img-circle img-fluid">
                                         </div>
                                     </div>
                                 </div>
