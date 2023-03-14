@@ -13,7 +13,6 @@ Vue.use(BootstrapVue,IconsPlugin)
 
 
 
-import Gobpe  from './components/paginas/gobpe.vue';
 
 import Inicio  from './components/paginas/index.vue';
 import Noticias from './components/paginas/Noticias.vue';
@@ -81,7 +80,8 @@ export default new Router({
             component:Procompite
         },
         {
-            path:'/lnormatividad/:id?/:anio?/:bus?',
+            // path:'/lnormatividad/:id?/:anio?/:bus?',
+            path:'/lnormatividad',
             name:'normatividad',
             component:Normatividad
         },

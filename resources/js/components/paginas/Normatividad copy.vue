@@ -31,39 +31,39 @@
                     <div class="form-group row">
                         <div class="col-sm-4">
                             <label for="">Tipo documento</label>
-                            <select v-model="codtipo" @change.prevent="getResults()" class="form-control">
-                                <option v-for="td in datatipodoc" :key="td.id" :value="td.id">{{td.tip_description}}</option>
+                            <select name="" id="" class="form-control" v-model="textdoc" @change="getResults($event)">
+                                <option value="s">Todos</option>
+                                <option v-for="td in datatipodoc" :values="td.indreg_tipo" v-if="td.indreg_tipo!='002o'">{{td.tip_description}}</option>
                             </select>
-                            
                         </div>
                         <div class="col-sm-2">
                             <label for="">Año</label>
-                            <select class="form-control" v-model="anio" @change="getResults($event)">
-                                <option value="">Todo</option>
+                            <select name="" id="" class="form-control" v-model="anio" @change="getResults($event)">
+                                <option value="0">Todo</option>
                                 <option v-for="fec in datfecha" :value="fec">{{fec}}</option>
                             </select>
                         </div>
                         <div class="col-sm-6">
                             <div class="input-group mt-4">
-                                <input type="search" class="form-control form-control-lg text-uppercase" placeholder="Ingrese su búsqueda (Ejm): 2018-2022, comité de selección" v-model="buscar" @keyup.enter="getResults(paginaslista)" autofocus >
+                                <input type="search" class="form-control form-control-lg" placeholder="Ingrese su búsqueda (Ejm): 2018-2022, comité de selección" v-model="buscar" @keyup="getResults(paginaslista)" autofocus>
                                 <div class="input-group-append">
                                     <button type="submit" class="btn btn-lg btn-primary" @click.prevent="getResults(paginaslista)">
                                         <i class="fa fa-search"></i>
                                     </button>
-                                    <button class="btn btn-info" @click.prevent="limpiar">
+                                    <button class="btn btn-info" @click="limpiar">
                                         <i class="fa-solid fa-rotate"></i>
                                     </button>
                                 </div>
                             </div>
-                            <!-- <div class="form-group row mt-2">
+                            <div class="form-group row mt-2">
                                 <div class="form-check">
                                     <label for="" class="pr-5">Búsqueda por:</label>
-                                    <input class="form-check-input" type="checkbox" v-model="numerosiglas" v-on:change="getResults" true-value="1" false-value="0">
+                                    <input class="form-check-input" type="checkbox"  v-model="numerosiglas" v-on:change="getResults" true-value="1" false-value="0">
                                     <label class="form-check-label pr-5">Número y siglas documento</label>
                                     <input class="form-check-input" type="checkbox" v-model="descripciondoc" v-on:change="getResults" true-value="1" false-value="0">
                                     <label class="form-check-label">Descripción documento</label>
                                 </div>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
 
@@ -76,16 +76,16 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="list in datanormatividad.data" :key="list.id" class="border ">
+                                <tr v-for="list in datanormatividad.data" :key="list.idregulation" class="border ">
                                     <td>
                                         <table width="100%" style="border:1px; padding:0px; margin:0px; ">
                                             <tr>
                                                 <td width="12%"><strong>Doc:</strong></td>
-                                                <td>{{ list.regulations_tipo }}({{list.reg_title}})</td>
+                                                <td>{{ list.reg_type }}({{list.reg_title}})</td>
                                             </tr>
                                             <tr>
                                                 <td><strong>Fecha:</strong></td>
-                                                <td>{{convertDateFormat(list.reg_date)}}</td>
+                                                <td>{{convertDateFormat(list.reg_date_start)}}</td>
                                             </tr>
                                             <tr>
                                                 <td><strong>Descripción:</strong></td>
@@ -95,7 +95,7 @@
                                         </table>
                                     </td>
                                     <td class="border-left">
-                                        <div v-html="archivos(list.files,list.id)" class="text-center">
+                                        <div v-html="archivos(list.reg_files,list.idregulation)" class="text-center">
 
                                         </div>
 
@@ -134,14 +134,13 @@ export default {
         return {
             datanormatividad: {},
             datatipodoc: {},
-            codtipo: 13,
-            anio: 2015,
+            textdoc: 's',
+            anio: 0,
             buscar: '',
             paginaslista: 1,
             datfecha: [],
-            numerosiglas: 1,
-            descripciondoc: 0,
-
+            numerosiglas:1,
+            descripciondoc:0
         }
     },
     created() {
@@ -160,21 +159,8 @@ export default {
         // if(!this.buscar)
         //  {this.getResults();} 
         this.getResults();
-        this.listatipodocumento();
     },
     methods: {
-        listatipodocumento() {
-            var url = 'http://200.3.195.20:8080/regulations/tipo'
-
-            axios
-                .get(url)
-                .then(response => {
-                    //this.datanormatividad = response.data.normatividad;
-                    this.datatipodoc = response.data;
-                    //console.log(response.data)
-
-                });
-        },
 
         getResults(page) {
             if (typeof page === "undefined") {
@@ -183,36 +169,41 @@ export default {
                 var pag = page;
             }
             this.paginaslista = pag
-            var textbu=this.buscar.toUpperCase();
-
-            var url = 'http://200.3.195.20:8080/regulations?page='+page+'&regulations_tipo=' + this.codtipo + '&reg_year=' + this.anio + '&magic=' + textbu + '&with=files&paginate=20';
+            var url = '/api/normatividad/' + this.textdoc + '/' + this.anio  + '/'+this.numerosiglas+'/'+this.descripciondoc+ '/' + this.buscar+'?page=' + pag;
 
             axios
                 .get(url)
                 .then(response => {
-                    //this.datanormatividad = response.data.normatividad;
-                    this.datanormatividad = response.data;
-                    console.log(response.data)
+                    this.datanormatividad = response.data.normatividad;
+                    this.datatipodoc = response.data.tipodoc;
 
+                    // this.buscar=''
+                    // console.log(this.datanormatividad);
                 });
+                // ,{
+                //     textdoc:this.textdoc,
+                //     anio:this.anio,
+                //     numerosiglas:this.numerosiglas,
+                //     descripciondoc:this.descripciondoc,
+                //     buscar:this.buscar,
+                // }
         },
         limpiar() {
-            // this.buscar = '';
-
-            // this.anio = 0;
-            // this.getResults();
-            location.reload()
+            this.buscar = '';
+            this.textdoc = 's';
+            this.anio = 0;
+            this.getResults();
         },
         recorta_cad(texto) {
             var substr = texto.substr(7);
             return substr;
         },
         archivos(objeto, idreg) {
-            var archivos = objeto//JSON.parse(objeto);
+            var archivos = JSON.parse(objeto);
             var cantidad = archivos.length;
             var enlace = '<span class="badge badge-dark right">' + cantidad + ' Archivos</span>';
             for (var i = 0; i < cantidad; i++) {
-                enlace += '<a href="http://200.3.195.20:8080/regulations/file/'+archivos[i].file_idregulation+'/'+archivos[i].file_tomo+'/'+archivos[i].file_nro_tipo+ '" target="_blank"><span class="mailbox-attachment-icon" style="font-size: 25px !important; padding: 3px !important; color:#ff0909;"><i class="far fa-file-pdf"></i></span></a><p class="text-center">' + archivos[i].file_size + ' MB</p>';
+                enlace += '<a href="http://data2.regionhuanuco.gob.pe/regulations/?reg=' + idreg + '&tomo=' + i + '"><span class="mailbox-attachment-icon" style="font-size: 25px !important; padding: 3px !important; color:#ff0909;"><i class="far fa-file-pdf"></i></span></a><p class="text-center">' + archivos[i].tamanio + ' MB</p>';
 
             }
 
@@ -221,8 +212,8 @@ export default {
 
         convertDateFormat(string) {
             var cad = '' + string + '';
-            var info = cad.split('-');
-            return info[2] + '-' + info[1] + '-' + info[0];
+            var info = cad.split('/');
+            return info[1] + '-' + info[0] + '-' + info[2];
 
         }
 

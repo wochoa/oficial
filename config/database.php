@@ -97,6 +97,21 @@ return [
             'sslmode' => 'prefer',
         ],
 
+        'normatividad' => [
+            'driver' => 'pgsql',
+            'url' => env('DATABASE_URL_NORMATIVIDAD'),
+            'host' => env('DB_HOST_NORMATIVIDAD', '127.0.0.1'),
+            'port' => env('DB_PORT_NORMATIVIDAD', '5432'),
+            'database' => env('DB_DATABASE_NORMATIVIDAD', 'forge'),
+            'username' => env('DB_USERNAME_NORMATIVIDAD', 'forge'),
+            'password' => env('DB_PASSWORD_NORMATIVIDAD', ''),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'schema' => 'normatividad',
+            'sslmode' => 'prefer',
+        ],
+
         'sqlsrv' => [
             'driver' => 'sqlsrv',
             'url' => env('DATABASE_URL'),

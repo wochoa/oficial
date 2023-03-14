@@ -257,7 +257,7 @@ class Paginasweb extends Controller
         //reg_status=1 
        
        if(strlen($text)==1 and $anio==0 and strlen($bus)==0){// cuando los tres campos es por defecto sin dato alguno
-        $normatividad=DB::connection('bdgorehco')->table('regulation')->where('reg_status',1)->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
+        $normatividad=DB::connection('normatividad')->table('regulations')->where('reg_status',1)->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
        }
        else{
                 if(strlen($text)==1 and $anio==0 and strlen($bus)>0)// SOLO PONIENDO EN BUSCAR
