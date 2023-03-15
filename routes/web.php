@@ -16,7 +16,6 @@ use App\Http\Controllers\Paginasweb;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-
 route::get('/{any?}',[Paginasweb::class,'index'])->name('baseruta')->where('any','.*');
 
 

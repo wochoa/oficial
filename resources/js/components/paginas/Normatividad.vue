@@ -164,7 +164,7 @@ export default {
     },
     methods: {
         listatipodocumento() {
-            var url = 'http://200.3.195.20:8080/regulations/tipo'
+            var url = '/api/tipodoc'
 
             axios
                 .get(url)
@@ -185,7 +185,7 @@ export default {
             this.paginaslista = pag
             var textbu=this.buscar.toUpperCase();
 
-            var url = 'http://200.3.195.20:8080/regulations?page='+page+'&regulations_tipo=' + this.codtipo + '&reg_year=' + this.anio + '&magic=' + textbu + '&with=files&paginate=20';
+            var url = '/api/regulations?page='+page+'&regulations_tipo=' + this.codtipo + '&reg_year=' + this.anio + '&magic=' + textbu + '&with=files&paginate=20';
 
             axios
                 .get(url)

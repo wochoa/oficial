@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use App\Models\Normatividad\RegulationsTipo;
+use App\Models\Normatividad\Regulation;
 
 class Paginasweb extends Controller
 {
@@ -252,90 +254,121 @@ class Paginasweb extends Controller
         return response()->json(['popup'=>$publicacion],200, ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'],JSON_UNESCAPED_UNICODE); 
     }
 
-    public function normatividad($text='',$anio,$siglas,$descripcion,$bus='')
+    public function tipodoc(Request $request)
     {
-        //reg_status=1 
-       
-       if(strlen($text)==1 and $anio==0 and strlen($bus)==0){// cuando los tres campos es por defecto sin dato alguno
-        $normatividad=DB::connection('normatividad')->table('regulations')->where('reg_status',1)->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
-       }
-       else{
-                if(strlen($text)==1 and $anio==0 and strlen($bus)>0)// SOLO PONIENDO EN BUSCAR
-                {// SOLO PONIENDO EN BUSCAR
-                   if($siglas==1 and  $descripcion==0)
-                   {
-                    $normatividad=DB::connection('bdgorehco')->table('regulation')->where('reg_status',1)->where('reg_title','LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
-                   }
-                   if($siglas==0 and  $descripcion==1){
-                    $normatividad=DB::connection('bdgorehco')->table('regulation')->where('reg_status',1)->where('reg_description','LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
-                   }
-                   if($siglas==1 and  $descripcion==1){
-                    $normatividad=DB::connection('bdgorehco')->table('regulation')->where('reg_status',1)->where('reg_description','LIKE','%'.$bus.'%')->orWhere('reg_title', 'LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
-                   }
-                   if($siglas==0 and  $descripcion==0){                    
-                    $normatividad=DB::connection('bdgorehco')->table('regulation')->where('reg_status',1)->where('reg_description','LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
-                   }
-                }
-                if(strlen($text)>1 and $anio==0 and strlen($bus)==0){// SOLO POR TIPO DE DOCUMENTO
-                    $normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text])->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20); 
-                }
-                if(strlen($text)==1 and $anio>0 and strlen($bus)==0){///  SOLO POR ANIO
-                    $normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_year'=>$anio])->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20); 
-                }
-
-                if(strlen($text)>1 and $anio==0 and strlen($bus)>0){///  SOLO POR TIPO DE DOCUMENTO Y BUSQUEDA
-                    //$normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text])->where('reg_title', 'LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
-                    
-                   if($siglas==1 and  $descripcion==0)
-                   {
-                    $normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text])->where('reg_title','LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
-                   }
-                   if($siglas==0 and  $descripcion==1){
-                    $normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text])->where('reg_description','LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
-                   }
-                   if($siglas==1 and  $descripcion==1){
-                    $normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text])->where('reg_description','LIKE','%'.$bus.'%')->orWhere('reg_title', 'LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
-                   }
-                   if($siglas==0 and  $descripcion==0){                    
-                    $normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text])->where('reg_description','LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
-                   }
-
-                }
-                if(strlen($text)>1 and $anio>0 and strlen($bus)==0){///  SOLO POR TIPO DE DOCUMENTO Y ANIO
-                    $normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text,'reg_year'=>$anio])->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20); 
-                    
-                }
-                if(strlen($text)>1 and $anio>0 and strlen($bus)>0){///  CUANDO SE BUSCA POR LOS TRES: TIPO DOCUMENTO, ANIO Y BUSQUEDA
-                    //$normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text,'reg_year'=>$anio])->where('reg_description','LIKE','%'.$bus.'%')->orWhere('reg_title', 'LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
-                    if($siglas==1 and  $descripcion==0)
-                   {
-                    $normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text,'reg_year'=>$anio])->where('reg_title','LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
-                   }
-                   if($siglas==0 and  $descripcion==1){
-                    $normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text,'reg_year'=>$anio])->where('reg_description','LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
-                   }
-                   if($siglas==1 and  $descripcion==1){
-                    $normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text,'reg_year'=>$anio])->where('reg_description','LIKE','%'.$bus.'%')->orWhere('reg_title', 'LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
-                   }
-                   if($siglas==0 and  $descripcion==0){                    
-                    $normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text,'reg_year'=>$anio])->where('reg_description','LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
-                   }
-                    
-                }
-                
-       }
-            // $normatividad=DB::connection('bdgorehco')->table('regulation')->where('reg_status',1)->where('reg_description','LIKE','%'.$bus.'%')->orderByRaw('reg_year DESC')->paginate(20);
-        $datocapturados=array('tipobus' =>$text ,'tipanio' =>$anio  ); 
-        
-        $tipodoc=DB::connection('bdgorehco')->table('regulations_tipo')->orderByRaw('tip_description ASC')->distinct('tip_description')->get();
-        $array=['normatividad'=>$normatividad,'tipodoc'=>$tipodoc,'datocapturados'=>$datocapturados];
-        
-
-        //return response()->json($this->convert_from_latin1_to_utf8_recursively($array));//local
-        
-        return response()->json($array,200, ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'],JSON_UNESCAPED_UNICODE);
-
+        return RegulationsTipo::filter($request)->get();
     }
+
+    public function regulations(Request $request)
+    {        
+        $regulations = Regulation::filter($request);
+        if ($request->magic) {
+            $regulations-> where(function ($query) use ($request) {
+                $porciones = explode(" ", $request->magic);
+                //$query->where('id', '>', 0);
+                foreach ($porciones as $id => $porcion) {
+                    if(is_numeric($porcion)){
+                        $query->orWhere('reg_num', $porcion);
+                    }
+                    $query->orWhere('reg_title', 'like', '%'.$porcion.'%');
+                    $query->orWhere('reg_description', 'like', '%'.$porcion.'%');
+                }
+            });
+        }
+        if ($request->paginate) {
+            return $regulations->paginate($request->paginate);
+
+        }else{
+            return $regulations->get();
+        }
+    }
+
+    
+
+    // public function normatividad($text='',$anio,$siglas,$descripcion,$bus='')
+    // {
+    //     //reg_status=1 
+       
+    //    if(strlen($text)==1 and $anio==0 and strlen($bus)==0){// cuando los tres campos es por defecto sin dato alguno
+    //     $normatividad=DB::connection('normatividad')->table('regulations')->where('reg_status',1)->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
+    //    }
+    //    else{
+    //             if(strlen($text)==1 and $anio==0 and strlen($bus)>0)// SOLO PONIENDO EN BUSCAR
+    //             {// SOLO PONIENDO EN BUSCAR
+    //                if($siglas==1 and  $descripcion==0)
+    //                {
+    //                 $normatividad=DB::connection('bdgorehco')->table('regulation')->where('reg_status',1)->where('reg_title','LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
+    //                }
+    //                if($siglas==0 and  $descripcion==1){
+    //                 $normatividad=DB::connection('bdgorehco')->table('regulation')->where('reg_status',1)->where('reg_description','LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
+    //                }
+    //                if($siglas==1 and  $descripcion==1){
+    //                 $normatividad=DB::connection('bdgorehco')->table('regulation')->where('reg_status',1)->where('reg_description','LIKE','%'.$bus.'%')->orWhere('reg_title', 'LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
+    //                }
+    //                if($siglas==0 and  $descripcion==0){                    
+    //                 $normatividad=DB::connection('bdgorehco')->table('regulation')->where('reg_status',1)->where('reg_description','LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
+    //                }
+    //             }
+    //             if(strlen($text)>1 and $anio==0 and strlen($bus)==0){// SOLO POR TIPO DE DOCUMENTO
+    //                 $normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text])->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20); 
+    //             }
+    //             if(strlen($text)==1 and $anio>0 and strlen($bus)==0){///  SOLO POR ANIO
+    //                 $normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_year'=>$anio])->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20); 
+    //             }
+
+    //             if(strlen($text)>1 and $anio==0 and strlen($bus)>0){///  SOLO POR TIPO DE DOCUMENTO Y BUSQUEDA
+    //                 //$normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text])->where('reg_title', 'LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
+                    
+    //                if($siglas==1 and  $descripcion==0)
+    //                {
+    //                 $normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text])->where('reg_title','LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
+    //                }
+    //                if($siglas==0 and  $descripcion==1){
+    //                 $normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text])->where('reg_description','LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
+    //                }
+    //                if($siglas==1 and  $descripcion==1){
+    //                 $normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text])->where('reg_description','LIKE','%'.$bus.'%')->orWhere('reg_title', 'LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
+    //                }
+    //                if($siglas==0 and  $descripcion==0){                    
+    //                 $normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text])->where('reg_description','LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
+    //                }
+
+    //             }
+    //             if(strlen($text)>1 and $anio>0 and strlen($bus)==0){///  SOLO POR TIPO DE DOCUMENTO Y ANIO
+    //                 $normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text,'reg_year'=>$anio])->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20); 
+                    
+    //             }
+    //             if(strlen($text)>1 and $anio>0 and strlen($bus)>0){///  CUANDO SE BUSCA POR LOS TRES: TIPO DOCUMENTO, ANIO Y BUSQUEDA
+    //                 //$normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text,'reg_year'=>$anio])->where('reg_description','LIKE','%'.$bus.'%')->orWhere('reg_title', 'LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
+    //                 if($siglas==1 and  $descripcion==0)
+    //                {
+    //                 $normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text,'reg_year'=>$anio])->where('reg_title','LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
+    //                }
+    //                if($siglas==0 and  $descripcion==1){
+    //                 $normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text,'reg_year'=>$anio])->where('reg_description','LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
+    //                }
+    //                if($siglas==1 and  $descripcion==1){
+    //                 $normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text,'reg_year'=>$anio])->where('reg_description','LIKE','%'.$bus.'%')->orWhere('reg_title', 'LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
+    //                }
+    //                if($siglas==0 and  $descripcion==0){                    
+    //                 $normatividad=DB::connection('bdgorehco')->table('regulation')->where(['reg_status'=>1,'reg_type'=>$text,'reg_year'=>$anio])->where('reg_description','LIKE','%'.$bus.'%')->orderBy('reg_year','DESC')->orderBy('reg_type','ASC')->orderBy('reg_num','DESC')->paginate(20);
+    //                }
+                    
+    //             }
+                
+    //    }
+    //         // $normatividad=DB::connection('bdgorehco')->table('regulation')->where('reg_status',1)->where('reg_description','LIKE','%'.$bus.'%')->orderByRaw('reg_year DESC')->paginate(20);
+    //     $datocapturados=array('tipobus' =>$text ,'tipanio' =>$anio  ); 
+        
+    //     $tipodoc=DB::connection('bdgorehco')->table('regulations_tipo')->orderByRaw('tip_description ASC')->distinct('tip_description')->get();
+    //     $array=['normatividad'=>$normatividad,'tipodoc'=>$tipodoc,'datocapturados'=>$datocapturados];
+        
+
+    //     //return response()->json($this->convert_from_latin1_to_utf8_recursively($array));//local
+        
+    //     return response()->json($array,200, ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'],JSON_UNESCAPED_UNICODE);
+
+    // }
 
     public function directorio($dir='')
     {

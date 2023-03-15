@@ -31,6 +31,11 @@ route::get('visitas',[Paginasweb::class,'visitas'])->name('visitas');
 route::get('buscarvisita/{bus}',[Paginasweb::class,'buscarvisita'])->name('buscarvisita');
 route::get('listapopup',[Paginasweb::class,'listapopup'])->name('listapopup');
 route::get('/normatividad/{text?}/{anio?}/{siglas?}/{descripcion?}/{bus?}',[Paginasweb::class,'normatividad'])->name('normatividad');
+
+route::get('tipodoc',[Paginasweb::class,'tipodoc'])->name('tipodoc');
+route::get('regulations',[Paginasweb::class,'regulations'])->name('regulations');
+
+
 route::get('directorio/{dir?}',[Paginasweb::class,'directorio'])->name('directorio');//directorio
 
 route::get('organigrama',[Paginasweb::class,'organigrama'])->name('organigrama');
