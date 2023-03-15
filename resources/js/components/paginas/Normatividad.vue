@@ -34,7 +34,7 @@
                             <select v-model="codtipo" @change.prevent="getResults()" class="form-control">
                                 <option v-for="td in datatipodoc" :key="td.id" :value="td.id">{{td.tip_description}}</option>
                             </select>
-                            
+
                         </div>
                         <div class="col-sm-2">
                             <label for="">Año</label>
@@ -45,7 +45,7 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="input-group mt-4">
-                                <input type="search" class="form-control form-control-lg text-uppercase" placeholder="Ingrese su búsqueda (Ejm): 2018-2022, comité de selección" v-model="buscar" @keyup.enter="getResults(paginaslista)" autofocus >
+                                <input type="search" class="form-control form-control-lg text-uppercase" placeholder="Ingrese su búsqueda (Ejm): 2018-2022, comité de selección" v-model="buscar" @keyup.enter="getResults(paginaslista)" autofocus>
                                 <div class="input-group-append">
                                     <button type="submit" class="btn btn-lg btn-primary" @click.prevent="getResults(paginaslista)">
                                         <i class="fa fa-search"></i>
@@ -176,19 +176,23 @@ export default {
                 });
         },
 
-        getResults(page) {
-            if (typeof page === "undefined") {
-                var pag = 1;
-            } else {
-                var pag = page;
-            }
-            this.paginaslista = pag
-            var textbu=this.buscar.toUpperCase();
+        getResults(page = 1) {
 
-            var url = '/api/regulations?page='+page+'&regulations_tipo=' + this.codtipo + '&reg_year=' + this.anio + '&magic=' + textbu + '&with=files&paginate=20';
+            this.paginaslista = page
+            var textbu = this.buscar.toUpperCase();
+
+            var url = '/api/regulations';
+            const params = {
+                page,
+                regulations_tipo: this.codtipo,
+                reg_year: this.anio,
+                magic: textbu,
+                with: 'files',
+                paginate: 20
+            }
 
             axios
-                .get(url)
+                .get(url, { params })
                 .then(response => {
                     //this.datanormatividad = response.data.normatividad;
                     this.datanormatividad = response.data;
@@ -208,11 +212,11 @@ export default {
             return substr;
         },
         archivos(objeto, idreg) {
-            var archivos = objeto//JSON.parse(objeto);
+            var archivos = objeto //JSON.parse(objeto);
             var cantidad = archivos.length;
             var enlace = '<span class="badge badge-dark right">' + cantidad + ' Archivos</span>';
             for (var i = 0; i < cantidad; i++) {
-                enlace += '<a href="http://200.3.195.20:8080/regulations/file/'+archivos[i].file_idregulation+'/'+archivos[i].file_tomo+'/'+archivos[i].file_nro_tipo+ '" target="_blank"><span class="mailbox-attachment-icon" style="font-size: 25px !important; padding: 3px !important; color:#ff0909;"><i class="far fa-file-pdf"></i></span></a><p class="text-center">' + archivos[i].file_size + ' MB</p>';
+                enlace += '<a href="http://200.3.195.20:8080/regulations/file/' + archivos[i].file_idregulation + '/' + archivos[i].file_tomo + '/' + archivos[i].file_nro_tipo + '" target="_blank"><span class="mailbox-attachment-icon" style="font-size: 25px !important; padding: 3px !important; color:#ff0909;"><i class="far fa-file-pdf"></i></span></a><p class="text-center">' + archivos[i].file_size + ' MB</p>';
 
             }
 
