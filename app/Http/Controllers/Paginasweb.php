@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use App\Models\Normatividad\RegulationsTipo;
 use App\Models\Normatividad\Regulation;
 
@@ -254,34 +255,40 @@ class Paginasweb extends Controller
         return response()->json(['popup'=>$publicacion],200, ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'],JSON_UNESCAPED_UNICODE); 
     }
 
+
+
+
     public function tipodoc(Request $request)
     {
-        return RegulationsTipo::filter($request)->get();
+        return Http::get('http://10.0.0.25:8080/regulations/tipo', $request->toArray())->json($key = null, $default = null);
     }
 
     public function regulations(Request $request)
     {        
-        $regulations = Regulation::filter($request);
-        if ($request->magic) {
-            $regulations-> where(function ($query) use ($request) {
-                $porciones = explode(" ", $request->magic);
-                //$query->where('id', '>', 0);
-                foreach ($porciones as $id => $porcion) {
-                    if(is_numeric($porcion)){
-                        $query->orWhere('reg_num', $porcion);
-                    }
-                    $query->orWhere('reg_title', 'like', '%'.$porcion.'%');
-                    $query->orWhere('reg_description', 'like', '%'.$porcion.'%');
-                }
-            });
-        }
-        if ($request->paginate) {
-            return $regulations->paginate($request->paginate);
+        // $regulations = Regulation::filter($request);
+        // if ($request->magic) {
+        //     $regulations-> where(function ($query) use ($request) {
+        //         $porciones = explode(" ", $request->magic);
+        //         //$query->where('id', '>', 0);
+        //         foreach ($porciones as $id => $porcion) {
+        //             if(is_numeric($porcion)){
+        //                 $query->orWhere('reg_num', $porcion);
+        //             }
+        //             $query->orWhere('reg_title', 'like', '%'.$porcion.'%');
+        //             $query->orWhere('reg_description', 'like', '%'.$porcion.'%');
+        //         }
+        //     });
+        // }
+        // if ($request->paginate) {
+        //     return $regulations->paginate($request->paginate);
 
-        }else{
-            return $regulations->get();
-        }
+        // }else{
+        //     return $regulations->get();
+        // }
+        return Http::get('http://10.0.0.25:8080/regulations', $request->toArray())->json($key = null, $default = null);
     }
+
+
 
     
 
