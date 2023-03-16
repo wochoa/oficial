@@ -81,7 +81,8 @@
                                         <table width="100%" style="border:1px; padding:0px; margin:0px; ">
                                             <tr>
                                                 <td width="12%"><strong>Doc:</strong></td>
-                                                <td>{{ list.regulations_tipo }}({{list.reg_title}})</td>
+                                                <!-- <td>{{ list.regulations_tipo }}({{list.reg_title}})</td> -->
+                                                <td>{{list.reg_title}}</td>
                                             </tr>
                                             <tr>
                                                 <td><strong>Fecha:</strong></td>
@@ -190,11 +191,13 @@ export default {
                 magic: textbu,
                 with: 'files',
                 paginate: 20,
-                'orders[]':'reg_num.desc'
+                'orders[]': 'reg_num.desc'
             }
 
             axios
-                .get(url, { params })
+                .get(url, {
+                    params
+                })
                 .then(response => {
                     //this.datanormatividad = response.data.normatividad;
                     this.datanormatividad = response.data;
