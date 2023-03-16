@@ -134,7 +134,7 @@ export default {
         return {
             datanormatividad: {},
             datatipodoc: {},
-            codtipo: 13,
+            codtipo: 45,
             anio: 2015,
             buscar: '',
             paginaslista: 1,
@@ -159,6 +159,7 @@ export default {
         //this.buscador();
         // if(!this.buscar)
         //  {this.getResults();} 
+        this.fechasistema();
         this.getResults();
         this.listatipodocumento();
     },
@@ -188,7 +189,8 @@ export default {
                 reg_year: this.anio,
                 magic: textbu,
                 with: 'files',
-                paginate: 20
+                paginate: 20,
+                'orders[]':'reg_num.desc'
             }
 
             axios
@@ -199,6 +201,19 @@ export default {
                     console.log(response.data)
 
                 });
+        },
+        fechasistema() {
+            const hoy = new Date();
+            // const year = hoy.getFullYear();
+            // const mes = hoy.getMonth();
+            // const dia = hoy.getDate();
+
+            // var mesdo = mes < 10 ? "0" + mes : mes;
+            // var diado = dia < 10 ? "0" + dia : dia;
+            this.anio = hoy.getFullYear();
+
+            //this.fechacobranza = hoy.toISOString().substring(0, 10); // year + '-' + mesdo + '-' + diado;
+
         },
         limpiar() {
             // this.buscar = '';
