@@ -123,11 +123,25 @@
 
                         <button type="button" data-bs-target="#carrusel_video" data-bs-slide-to="3" aria-label="Slide 4">
                         </button>
+                        <button type="button" data-bs-target="#carrusel_video" data-bs-slide-to="3" aria-label="Slide 4">
+                        </button>
 
                     </ol>
                     <div class="carousel-inner" role="listbox">
 
                         <div class="carousel-item active">
+                            <div class="row align-items-center">
+                                <div class="col-md-6 text-center">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/PVaFAHd7xMo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="mb-3 text-primary mt-3">#SEMANASANTA</h3>
+                                    <p class="text-justify">🔵 EN ESTA #SEMANASANTA Y #FERIADOLARGO VISITA TINGO MARÍA I GOREHCO 👏🏻🎊</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
                             <div class="row align-items-center">
                                 <div class="col-md-6 text-center">
                                     <iframe width="560" height="315" src="https://www.youtube.com/embed/7AQnjKrdpyY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
