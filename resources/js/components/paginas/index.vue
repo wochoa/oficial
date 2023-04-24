@@ -255,7 +255,7 @@
                           </svg> CORREOS</h6> -->
                                 <div>
                                     Responsable del Portal de Transparencia
-                                    <h6>Mg. Bertha Ada Gonzales Soto</h6>
+                                    <h6>Lic. Pedro Alcides Cardozo Sanabria</h6>
                                 </div>
                                 <div>
                                     Responsable de acceso a la información
