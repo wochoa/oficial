@@ -78,6 +78,6 @@ body::-webkit-scrollbar-track:active {
 <script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../../dist/js/demo.js"></script> --}}
-<script src="{{ asset('js/app.js') }}" defer></script>
+<script src="{{ mix('js/app.js') }}" defer></script>
 </body>
 </html>
