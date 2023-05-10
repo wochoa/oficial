@@ -380,10 +380,10 @@ class Paginasweb extends Controller
     public function directorio($dir='')
     {
         if(strlen($dir)!=0){
-            $directorio=DB::connection('pgsql')->table('tram_dependencia')->where(['depe_tipo'=>1,'depe_estado'=>1])->where('depe_nombre','LIKE','%'.strtoupper($dir).'%')->orderBy('iddependencia','ASC')->paginate(20); 
+            $directorio=DB::connection('sgd')->table('tram_dependencia')->where(['depe_tipo'=>1,'depe_estado'=>1])->where('depe_nombre','LIKE','%'.strtoupper($dir).'%')->orderBy('iddependencia','ASC')->paginate(20); 
         }
         else{
-            $directorio=DB::connection('pgsql')->table('tram_dependencia')->where(['depe_tipo'=>1,'depe_estado'=>1])->orderBy('iddependencia','ASC')->paginate(20); 
+            $directorio=DB::connection('sgd')->table('tram_dependencia')->where(['depe_tipo'=>1,'depe_estado'=>1])->orderBy('iddependencia','ASC')->paginate(20); 
         }
        
         
@@ -399,7 +399,7 @@ class Paginasweb extends Controller
    }
    public function unidad($cod)
    {
-    $directorio=DB::connection('pgsql')->table('tram_dependencia')->where(['depe_tipo'=>1,'iddependencia'=>$cod])->orderBy('iddependencia','ASC')->get();
+    $directorio=DB::connection('sgd')->table('tram_dependencia')->where(['depe_tipo'=>1,'iddependencia'=>$cod])->orderBy('iddependencia','ASC')->get();
     //return view('directorio',compact('directorio'));
     return $directorio;
    }
