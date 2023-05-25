@@ -234,7 +234,7 @@ export default {
             var cantidad = archivos.length;
             var enlace = '<span class="badge badge-dark right">' + cantidad + ' Archivos</span>';
             for (var i = 0; i < cantidad; i++) {
-                enlace += '<a href="http://200.3.195.20:8080/regulations/file/' + archivos[i].file_idregulation + '/' + archivos[i].file_tomo + '/' + archivos[i].file_nro_tipo + '" target="_blank"><span class="mailbox-attachment-icon" style="font-size: 25px !important; padding: 3px !important; color:#ff0909;"><i class="far fa-file-pdf"></i></span></a><p class="text-center">' + archivos[i].file_size + ' MB</p>';
+                enlace += '<a href="http://proyectos.regionhuanuco.gob.pe/regulations/file/' + archivos[i].file_idregulation + '/' + archivos[i].file_tomo + '/' + archivos[i].file_nro_tipo + '" target="_blank"><span class="mailbox-attachment-icon" style="font-size: 25px !important; padding: 3px !important; color:#ff0909;"><i class="far fa-file-pdf"></i></span></a><p class="text-center">' + archivos[i].file_size + ' MB</p>';
 
             }
 
