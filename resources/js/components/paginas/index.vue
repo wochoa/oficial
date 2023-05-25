@@ -51,7 +51,7 @@
                     </div>
 
                     <!-- SECCION CUATRO -->
-                    <div class="row p-1 mt-2 bg-primary" v-for="(sec4,indexs2) in listasecciones" v-if="sec4.seccion_pag==4" style="border-radius: 4px">
+                    <div class="row p-1 mt-2" :style="'background:'+$attrs.thema.tmcolor_tema" v-for="(sec4,indexs2) in listasecciones" v-if="sec4.seccion_pag==4" style="border-radius: 4px">
                         <div class="col-md-9">
                             <h4 class="lead">{{sec4.titulo}}</h4>
                             <h5>{{ sec4.texto_enlace }}</h5>
@@ -220,7 +220,7 @@
 
             <hr />
 
-            <div id="mapa-contactanos" class="p-3 pt-4 d-none d-md-block">
+            <div id="mapa-contactanos" class="p-3 pt-4 d-none d-md-block" :style="'background:'+$attrs.thema.tmcolor_tema+'d6'">
                 <table>
                     <tbody>
                         <tr>
@@ -605,7 +605,7 @@ h6 {
 }
 
 .anima_btn:hover {
-    background-color: #0044a273;
+    background-color: #1db17878 ;
 }
 
 .cerrar {

@@ -1,12 +1,13 @@
 <template>
  <div>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm fixed-top" style="background:#0044a2 !important;"><!-- #2745a0  #054a91-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm fixed-top" :style="'background:'+$attrs.thema.tmcolor_tema+'!important;'"><!-- #2745a0  #054a91-->
             <div class="container">
                 <!-- <a class="navbar-brand" href="/">
                     Laravel
                 </a> -->
                 <router-link to="/" class="navbar-brand" >
-                  <img :src="ruta+'./../img/logo.png'" alt="" height="40">
+                  <!-- <img :src="ruta+'./../img/logo.png'" alt="" height="40"> -->
+                  <img :src="'http://gestionportales.regionhuanuco.gob.pe/storage/'+recorta_cad($attrs.thema.tmlogo_tema)" height="60">
                </router-link>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -48,14 +49,14 @@
             </div>
     </nav>
     
-    <div class="nav-scroller bg-white shadow-sm fixed-top " style="background-color: rgba(5, 74, 145, 0.376) !important;margin-top: 65px; height:2.75rem;">
+    <div class="nav-scroller bg-white shadow-sm fixed-top " :style="'background-color:'+ $attrs.thema.tmcolor_tema+'78 !important;margin-top: 85px; height:2.75rem;'">
 
       <div class="container nav nav-underline " >
          
-            <div class="col-md-3 bg-danger" align="left">
+            <div class="col-md-3 bg-dark" align="left">
             <a href="http://digital.regionhuanuco.gob.pe/registro/mesa-partes-virtual/3" class="nav-link active" target="_blank"><i class="fa fa-envelope"></i> Nuestra Mesa de Partes Virtual</a>
              </div>
-            <div class="col-md-3 bg-info" align="left">
+            <div class="col-md-3 bg-secondary" align="left">
             <!-- <a href="/pagina/103" class="nav-link active" target="_blank"><i class="fa fa-envelope"></i> Mesa de Partes Virtual Direcciones y Unidades</a> -->
             <router-link :to="'/pagina/103'" class="nav-link active"><i class="fa fa-envelope"></i> Mesa de Partes Virtual Direcciones y Unidades</router-link>
             </div>
@@ -92,7 +93,11 @@ import axios from "axios";
                 this.listamenus=response.data.menus;
                 this.listasubmenus=response.data.submenus;
               });
-       }
+       },
+       recorta_cad(texto) {
+            var substr = texto.substr(7);
+            return substr;
+        }
      },
    
  }
