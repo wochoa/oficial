@@ -84,7 +84,7 @@ export default {
             .then(response=>{
               this.datacorousel=response.data.slider;
               this.existeimg=true;
-              console.log(response.data);
+              // console.log(response.data);
             }).catch(function(error) {
                 // handle error
                 this.existeimg=false;

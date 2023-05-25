@@ -30,8 +30,7 @@
                                  <template v-if="submen.idmenus===item.idmenus">
                                     <router-link v-if="submen.idpagina" class="dropdown-item" :to="'/pagina/'+submen.idpagina"  v-html="submen.nom_submenu"></router-link>
                                     <a v-else class="dropdown-item" :href="submen.link_submenu "  v-html="submen.nom_submenu"></a>
-                                 </template>
-                                
+                                 </template>                                
                               </template>
 
                             </div>
@@ -62,9 +61,7 @@
             </div>
             <div class="col-md-2"><!-- <a class="nav-link active">Central teléfonica <i class="fa fa-phone-volume"></i> +51 (062) 51-2124</a>--></div>
             <div class="col-md-2"><a class="nav-link active" href="https://mail.regionhuanuco.gob.pe/"><i class="fa fa-envelope"></i> Correo Institucional</a></div>
-            <div class="col-md-2" align="right"><a class="nav-link active" href="http://www.transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=10146#.WcqzcWjWyUk"><img src="http://www.regionhuanuco.gob.pe/img/portal.png" alt="" height="30"></a></div>
-            
-            
+            <div class="col-md-2" align="right"><a class="nav-link active" href="http://www.transparencia.gob.pe/enlaces/pte_transparencia_enlaces.aspx?id_entidad=10146#.WcqzcWjWyUk"><img src="http://www.regionhuanuco.gob.pe/img/portal.png" alt="" height="30"></a></div> 
          </div>
       
     </div>
@@ -95,7 +92,7 @@ import axios from "axios";
               });
        },
        recorta_cad(texto) {
-            var substr = texto.substr(7);
+            var substr = (texto || '').substr(7);
             return substr;
         }
      },

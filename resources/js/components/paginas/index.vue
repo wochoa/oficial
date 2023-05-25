@@ -57,7 +57,7 @@
                             <h5>{{ sec4.texto_enlace }}</h5>
                         </div>
                         <div class="col-md-3">
-                            <a class="btn btn-block btn-outline-warning" :href="sec4.enlace " target="_blank">Descargar</a>
+                            <a class="btn btn-block btn-warning" :href="sec4.enlace " target="_blank">Descargar</a>
                         </div>
                     </div>
 
@@ -383,7 +383,7 @@ export default {
             //   $('.modal-header').css('padding', '1px !important;');
         },
         decodeHtml(html) {
-            console.log(html);
+            //console.log(html);
             var txt = document.createElement("textarea");
             txt.innerHTML = html;
             return txt.value;
