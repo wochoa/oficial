@@ -64,16 +64,17 @@
                     <!-- SECION 3-->
                     <div class="row p-1" style="background: url('img/fondo/bg1.jpg'), #cfe2ff;border-radius: 4px ">
                         <h4 class="text-center">Boletines </h4>
+
+                        <Boletin :boletin="listasecciones" />
                        
-                        <div class="col-md-6" v-for="sec3 in listasecciones" v-if="sec3.seccion_pag==3">
+                        <!-- <div class="col-md-6" v-for="sec3 in listasecciones" v-if="sec3.seccion_pag==3">
                             <div :class="'row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-'+sec3.color">
                                 <div class="col-auto d-none d-lg-block">
 
                                     <img :src="'http://gestionportales.regionhuanuco.gob.pe/storage/'+recorta_cadena(sec3.archivo_imagen)" width="200" alt="">
                                 </div>
                                 <div class="col p-4 d-flex flex-column position-static"  >
-                                    <!-- {{ sec3.titulo }} -->
-                                    <!-- {{ decodeHtml(sec3.titulo )}} -->
+
                                     <div v-html="sec3.titulo">
 
                                     </div>
@@ -82,7 +83,11 @@
                                 </div>
 
                             </div>
-                        </div>
+                        </div> -->
+
+
+
+
                     </div>
 
                 </div>
@@ -343,6 +348,7 @@ import Slidershow from './CarrouselPublicidad'
 import Slidernoticias from './Carrouselnoticias'
 import SliderEnlaces from './CarrouselEnlaces'
 import Anunciopopup from './anunciospopup'
+import Boletin from './carrouselboletin'
 // import axios from 'axios'
 
 export default {
@@ -351,7 +357,8 @@ export default {
         Slidershow,
         Slidernoticias,
         SliderEnlaces,
-        Anunciopopup
+        Anunciopopup,
+        Boletin
     },
 
     data() {
