@@ -8,9 +8,15 @@
             <img :src="'https://img.youtube.com/vi/'+prim.idvideo+'/maxresdefault.jpg'" class="card-img-top" alt="...">
             <!-- <iframe class="rounded-2" width="628" height="315" :src="'https://www.youtube.com/embed/'+prim.idvideo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
             <div class="card-body bg-success border-1">
-                <router-link :to="'/noticias/'+prim.idnoticias">
+                <!-- <router-link :to="'/noticias/'+prim.idnoticias">
                     <h5 class="card-title text-warning">{{ decodeHtml(prim.titulo)}}</h5>
-                </router-link>
+                </router-link> -->
+
+                <a :href="prim.url" class="text-decoration-none" target="_blank">
+                
+                  <h5 class="card-title text-warning">{{ decodeHtml(prim.titulo)}}</h5>
+                  
+                </a>
 
                 <!-- <p class=" card-text lh-1 textxs" style="font-size: 12px">{{prim.cortado}}</p> -->
 
