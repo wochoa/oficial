@@ -108,13 +108,13 @@
 
     <!-- VIDEOS -->
     <section id="anuncios">
-        <div class="pt-3 pb-3 bg-success" style="background:#ffff;">
+        <div class="pt-3 pb-3" style="background:#1db178;">
             <div class="container">
                 <h4 class="text-center"> Videos </h4>
                 <hr />
                 <Slidervideos :ruta="ruta" class="mt-4" />
                         <div align="right">
-                            <a href="https://www.youtube.com/channel/UCFCS1cmD-9iM6nqetz-qXoA" :class="'btn btn-dark btn-sm'" target="_blank">
+                            <a href="https://www.youtube.com/channel/UCFCS1cmD-9iM6nqetz-qXoA" :class="'btn btn-success btn-sm'" target="_blank">
                                 Ver más Videos
                                 <i class="fas fa-arrow-circle-right" aria-hidden="true"></i>
                             </a>
