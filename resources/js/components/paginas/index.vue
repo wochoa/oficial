@@ -319,6 +319,7 @@ export default {
             txt.innerHTML = html;
             return txt.value;
         }
+        
 
         // hideModal() {
         //   this.$refs['my-modal'].hide()
@@ -553,4 +554,5 @@ h6 {
 .modal-header .modalheader {
     padding: 0px !important;
 }
+
 </style>

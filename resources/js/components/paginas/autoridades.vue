@@ -85,7 +85,7 @@
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="lead"><b>ING. MILTON SOTO SOTO</b></h2>
+                                            <h2 class="lead"><b>ECON. PERCY REÁTEGUI PICÓN</b></h2>
                                             <p class="text-warning text-sm"><b>GERENTE GENERAL REGIONAL: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-warning">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>msotos@regionhuanuco.gob.pe</li>
@@ -93,7 +93,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-5 text-center">
-                                            <img :src="ruta+'/img/gerentes/1.png'" alt="" class="img-circle img-fluid" >
+                                            <img :src="ruta+'/img/gerentes/0.jpg'" alt="" class="img-circle img-fluid">
                                         </div>
                                     </div>
                                 </div>
@@ -115,7 +115,7 @@
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="lead"><b>ABOG. JORGE RAUL OYARCE ESTRELLA</b></h2>
+                                            <h2 class="lead"><b>GERENCIA REGIONAL DE ASESORÍA JURÍDICA</b></h2>
                                             <p class="text-muted text-sm"><b>GERENTE REGIONAL DE ASESORIA JURIDICA: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-muted">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>xxxxxx</li>
@@ -123,7 +123,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-5 text-center">
-                                            <img :src="ruta+'/img/gerentes/2.png'" alt="" class="img-circle img-fluid">
+                                            <img :src="ruta+'/img/gerentes/0.jpg'" alt="" class="img-circle img-fluid">
                                         </div>
                                     </div>
                                 </div>
@@ -175,7 +175,7 @@
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="lead"><b>ING. TITO JOSIP JAIME HIDALGO</b></h2>
+                                            <h2 class="lead"><b>MARCO AUGUSTO MINAYA MARTEL</b></h2>
                                             <p class="text-muted text-sm"><b>GERENTE REGIONAL DE DESARROLLO ECONOMICO: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-muted">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>xxxxxx</li>
@@ -183,7 +183,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-5 text-center">
-                                            <img :src="ruta+'/img/gerentes/4.png'" alt="" class="img-circle img-fluid">
+                                            <img :src="ruta+'/img/gerentes/0.jpg'" alt="" class="img-circle img-fluid">
                                         </div>
                                     </div>
                                 </div>
@@ -205,7 +205,7 @@
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="lead"><b>CPC. EDWING EDY MENDOZA VELEZ DE VILLA</b></h2>
+                                            <h2 class="lead"><b>JOSE LUIS LLANOS ARRIETA</b></h2>
                                             <p class="text-muted text-sm"><b>GERENTE REGIONAL DE ADMINISTRACION: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-muted">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>xxxxxx</li>
@@ -213,7 +213,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-5 text-center">
-                                            <img :src="ruta+'/img/gerentes/5.png'" alt="" class="img-circle img-fluid">
+                                            <img :src="ruta+'/img/gerentes/0.jpg'" alt="" class="img-circle img-fluid">
                                         </div>
                                     </div>
                                 </div>
@@ -235,7 +235,7 @@
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="lead"><b>ING. JUAN TOMAS DEZA FALCON</b></h2>
+                                            <h2 class="lead"><b>ARTHUR JAVIER ANTONIO ARCE SAAVEDRA</b></h2>
                                             <p class="text-muted text-sm"><b>GERENTE REGIONAL DE RECURSOS NATURALES Y GESTION AMBIENTAL: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-muted">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>xxxxxx</li>
@@ -243,7 +243,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-5 text-center">
-                                            <img :src="ruta+'/img/gerentes/6.png'" alt="" class="img-circle img-fluid">
+                                            <img :src="ruta+'/img/gerentes/0.jpg'" alt="" class="img-circle img-fluid">
                                         </div>
                                     </div>
                                 </div>
@@ -265,7 +265,7 @@
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="lead"><b>ECON. ALDO FERNANDO REYES VIVIANO</b></h2>
+                                            <h2 class="lead"><b>ALBERTO EBER CONTRERAS MARIÑO</b></h2>
                                             <p class="text-muted text-sm"><b>GERENTE REGIONAL DE DESARROLLO SOCIAL: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-muted">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>xxxxx</li>
@@ -273,7 +273,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-5 text-center">
-                                            <img :src="ruta+'/img/gerentes/7.png'" alt="" class="img-circle img-fluid">
+                                            <img :src="ruta+'/img/gerentes/0.jpg'" alt="" class="img-circle img-fluid">
                                         </div>
                                     </div>
                                 </div>
@@ -336,9 +336,39 @@
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="lead"><b>RAFAEL CÉSPEDES GAMARRA <span class="right badge badge-danger">Consejero delegado</span></b></h2>
-                                            <p class="text-warning text-sm"><b>CONSEJERO: </b> PROVINCIA HUACAYBAMBA</p>
+                                            <h2 class="lead" style="text-transform: uppercase;"><b>Carlos Alberto  Esteban Atencia <span class="right badge badge-danger">Consejero delegado</span></b></h2>
+                                            <p class="text-warning text-sm"><b>CONSEJERO: </b> PROVINCIA AMBO</p>
                                             <ul class="ml-4 mb-0 fa-ul text-warning">
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>carloshuanuco@hotmail.com</li>
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: 949 648 090</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                            <img :src="ruta+'/img/consejeros2023/16ambo.jpg'" alt="" class="img-circle img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-right">
+
+                                        <a href="https://www.facebook.com/photo/?fbid=478192541167576&set=pcb.478192661167564" target="_blank" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-user"></i> Ver C.V.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                            <div class="card bg-light">
+                                <div class="card-header text-muted border-bottom-0">
+                                    <!-- {{-- PROVINCIA HUÁNUCO --}} -->
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="lead"><b>RAFAEL CÉSPEDES GAMARRA </b></h2>
+                                            <p class="text-muted text-sm"><b>CONSEJERO: </b> PROVINCIA HUACAYBAMBA</p>
+                                            <ul class="ml-4 mb-0 fa-ul text-muted">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>fenixc815@gmail.com </li>
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: 918 824 475</li>
                                             </ul>
@@ -351,7 +381,7 @@
                                 <div class="card-footer">
                                     <div class="text-right">
 
-                                        <a href="https://www.facebook.com/photo/?fbid=478192177834279&set=pcb.478192661167564" target="_blank" class="btn btn-sm btn-primary" >
+                                        <a href="https://www.facebook.com/photo/?fbid=478192177834279&set=pcb.478192661167564" target="_blank" class="btn btn-sm btn-primary">
                                             <i class="fas fa-user"></i> Ver C.V.
                                         </a>
                                     </div>
@@ -388,36 +418,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
-                            <div class="card bg-light">
-                                <div class="card-header text-muted border-bottom-0">
-                                    <!-- {{-- PROVINCIA HUÁNUCO --}} -->
-                                </div>
-                                <div class="card-body pt-0">
-                                    <div class="row">
-                                        <div class="col-7">
-                                            <h2 class="lead" style="text-transform: uppercase;"><b>Carlos Alberto  Esteban Atencia</b></h2>
-                                            <p class="text-muted text-sm"><b>CONSEJERO: </b> PROVINCIA AMBO</p>
-                                            <ul class="ml-4 mb-0 fa-ul text-muted">
-                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>carloshuanuco@hotmail.com</li>
-                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: 949 648 090</li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-5 text-center">
-                                            <img :src="ruta+'/img/consejeros2023/16ambo.jpg'" alt="" class="img-circle img-fluid">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <div class="text-right">
 
-                                        <a href="https://www.facebook.com/photo/?fbid=478192541167576&set=pcb.478192661167564" target="_blank" class="btn btn-sm btn-primary">
-                                            <i class="fas fa-user"></i> Ver C.V.
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
                             <div class="card bg-light">
                                 <div class="card-header text-muted border-bottom-0">
