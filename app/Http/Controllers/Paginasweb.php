@@ -120,6 +120,29 @@ class Paginasweb extends Controller
         JSON_UNESCAPED_UNICODE);
     }
 
+    public function videosini()
+    {
+        $enlace = "http://".request()->server('HTTP_HOST');
+        
+        $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->value('iddirecciones_web');
+        $iddireccionweb=$portalesweb;//id de pagina web
+
+        $publicacion=DB::table('videos')->where(['estado'=>1,'iddirecciones_web'=>$iddireccionweb])->orderBy('id','DESC')->limit(8)->get();
+        for($i=0;$i<count($publicacion);$i++)
+        {
+            // $imagen=substr($publicacion[$i]->img1,7);
+            $titulo=html_entity_decode($publicacion[$i]->titulo);//utf8_decode($publicacion[$i]->titulo);
+            $url=html_entity_decode($publicacion[$i]->url);
+            $idvideo = explode("=", $url);
+
+            $datos[]=array('id'=>$publicacion[$i]->id,'titulo'=>$titulo,'url'=>$url,'idvideo'=>$idvideo[1],'fecha'=>$publicacion[$i]->created_at);
+        }
+
+        //$datos=$this->convert_from_latin1_to_utf8_recursively($datos);
+        return response()->json(['listavideos'=>$datos],200, ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'],
+        JSON_UNESCAPED_UNICODE);
+    }
+
     public function pagina($id)
     {
         $enlace = "http://".request()->server('HTTP_HOST');
@@ -260,7 +283,7 @@ class Paginasweb extends Controller
 
     public function tipodoc(Request $request)
     {
-        return Http::get('http://10.0.0.25:8080/regulations/tipo', $request->toArray())->json($key = null, $default = null);
+        return Http::get('http://proyectos.regionhuanuco.gob.pe/regulations/tipo', $request->toArray())->json($key = null, $default = null);
     }
 
     public function regulations(Request $request)
@@ -285,7 +308,7 @@ class Paginasweb extends Controller
         // }else{
         //     return $regulations->get();
         // }
-        return Http::get('http://10.0.0.25:8080/regulations', $request->toArray())->json($key = null, $default = null);
+        return Http::get('http://proyectos.regionhuanuco.gob.pe/regulations', $request->toArray())->json($key = null, $default = null);
     }
 
 
@@ -429,7 +452,7 @@ class Paginasweb extends Controller
    }
 
    public function tema()
-   {   $dnsserver="http://gestionportales.regionhuanuco.gob.pe";
+   {   $dnsserver=env('URL_TEMA');
 
        $enlace = "http://".request()->server('HTTP_HOST');
        $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->get();

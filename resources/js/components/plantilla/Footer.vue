@@ -2,7 +2,7 @@
   <div>
         <!-- Main Footer -->
      <footer class="main-footer" :style="'background:'+$attrs.thema.tmcolor_tema">
-       <div class="container">
+       <div class="container text-light">
          <!-- To the right -->
        <div class="float-right d-none d-sm-inline">
          {{$attrs.thema.nombredireccionweb}}

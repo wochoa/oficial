@@ -23,6 +23,7 @@ route::get('/menus',[Paginasweb::class,'menus'])->name('menus');
 route::get('/pagina/{id}',[Paginasweb::class,'pagina'])->name('pagina');
 route::get('/convocatorias',[Paginasweb::class,'convocatorias'])->name('convocatorias');
 route::get('/noticiasini',[Paginasweb::class,'noticiasini'])->name('noticiasini');
+route::get('/videosini',[Paginasweb::class,'videosini'])->name('videosini');
 route::get('enlace_refe',[Paginasweb::class,'enlacerefe'])->name('enlacerefe');//secciones
 route::get('secciones',[Paginasweb::class,'secciones'])->name('secciones');
 route::get('allnoticias',[Paginasweb::class,'allnoticias'])->name('allnoticias');//allnoticias

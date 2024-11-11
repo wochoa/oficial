@@ -12,6 +12,7 @@
         :src="'http://gestionportales.regionhuanuco.gob.pe/storage/'+recorta_cad(popup.nompopup)"
         height="600"
         width="498"
+        :class="'rounded-2'"
       />
       
       <div class=" modal-footer text-center " v-if="popup.enlace_popup!='#'">

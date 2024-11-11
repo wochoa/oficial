@@ -27,9 +27,11 @@
                         <h3 class="card- titulonot_2"><strong>Organigrama</strong></h3>
                   </div>
                   <div class="card-body">
-                      <h4> Aprobado mediante Ordenanza Regional Nro 040-2020-GRH-CR. <a href="https://drive.google.com/file/d/1d_UbTmv1ZCLHmGVFTjTMOB_D_jicL9Mg/view" target="_blank" class="btn btn-danger btn-sm"> <i class="fa fa-file"></i> Ver documento</a></h4>
-                        
-                        <table width="80%" border="0" cellpadding="0" cellspacing="0" align="center">
+                      <h4> Aprobado mediante Ordenanza Regional Nro 013-2023-GRH-CR. <a href="https://drive.google.com/file/d/1naSUbfkKb7PbhZ8KVVE5fJhAylHyOQjg/view" target="_blank" class="btn btn-danger btn-sm"> <i class="fa fa-file"></i> Ver documento</a></h4>
+                      <div class="alert alert-success" role="alert">
+                        Estamos actualizando la finformación.
+                      </div>
+                        <!-- <table width="80%" border="0" cellpadding="0" cellspacing="0" align="center">
                           <tr>
                             <td colspan="91">&nbsp;</td>
                             <td width="5">&nbsp;</td>
@@ -1426,7 +1428,7 @@
                             <td>&nbsp;</td>
                           </tr>
                           
-                        </table>
+                        </table> -->
                   </div>
                   
                 </div>

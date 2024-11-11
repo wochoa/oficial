@@ -66,7 +66,7 @@
                         <h4 class="text-center">Boletines </h4>
 
                         <Boletin :boletin="listasecciones" />
-                       
+
                         <!-- <div class="col-md-6" v-for="sec3 in listasecciones" v-if="sec3.seccion_pag==3">
                             <div :class="'row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-'+sec3.color">
                                 <div class="col-auto d-none d-lg-block">
@@ -85,9 +85,6 @@
                             </div>
                         </div> -->
 
-
-
-
                     </div>
 
                 </div>
@@ -95,13 +92,14 @@
                     <!-- SECCION 5  --->
                     <template v-for="(sec5,index5) in listasecciones" v-if="sec5.seccion_pag==5">
                         <a v-if="sec5.archivo_imagen!=null" :href="sec5.enlace" :class="'dropdown-item bg-'+sec5.color+' mb-1'" target="_blank">
-                            <div class="media">
-                                <img :src="'http://gestionportales.regionhuanuco.gob.pe/storage/'+recorta_cadena(sec5.archivo_imagen)" alt="User Avatar" class="img-fluid">
+                            <div class="media rounded-2">
+                                <img :src="'http://gestionportales.regionhuanuco.gob.pe/storage/'+recorta_cadena(sec5.archivo_imagen)" alt="User Avatar" class="rounded-2 img-fluid">
                             </div>
                         </a>
 
-                        <a v-else :href="sec5.enlace" :class="'btn btn-'+sec5.color+' btn-block mb-1 titulonot_2 bton_enlace'"><i class="fas fa-address-card"></i> {{ sec5.texto_enlace }}</a>
+                        <a v-else :href="sec5.enlace" :class="'btn btn-'+sec5.color+' btn-block mb-1 titulonot_2 rounded-2'"><i class="fas fa-address-card"></i> {{ sec5.texto_enlace }}</a>
                     </template>
+
                 </div>
             </div>
         </div>
@@ -110,108 +108,20 @@
 
     <!-- VIDEOS -->
     <section id="anuncios">
-        <div class="pt-3 pb-3" style="background:#ffff;">
+        <div class="pt-3 pb-3 bg-success" style="background:#ffff;">
             <div class="container">
                 <h4 class="text-center"> Videos </h4>
                 <hr />
-                <div id="carrusel_video" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-
-                        <button type="button" data-bs-target="#carrusel_video" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
-                        </button>
-
-                        <button type="button" data-bs-target="#carrusel_video" data-bs-slide-to="1" aria-label="Slide 2">
-                        </button>
-
-                        <button type="button" data-bs-target="#carrusel_video" data-bs-slide-to="2" aria-label="Slide 3">
-                        </button>
-
-                        <button type="button" data-bs-target="#carrusel_video" data-bs-slide-to="3" aria-label="Slide 4">
-                        </button>
-                        <button type="button" data-bs-target="#carrusel_video" data-bs-slide-to="4" aria-label="Slide 5">
-                        </button>
-
-                    </ol>
-                    <div class="carousel-inner" role="listbox">
-
-                        <div class="carousel-item active">
-                            <div class="row align-items-center">
-                                <div class="col-md-6 text-center">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/PVaFAHd7xMo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                                </div>
-                                <div class="col-md-6">
-                                    <h3 class="mb-3 text-primary mt-3">#SEMANASANTA</h3>
-                                    <p class="text-justify">🔵 EN ESTA #SEMANASANTA Y #FERIADOLARGO VISITA TINGO MARÍA I GOREHCO 👏🏻🎊</p>
-                                </div>
-                            </div>
+                <Slidervideos :ruta="ruta" class="mt-4" />
+                        <div align="right">
+                            <a href="https://www.youtube.com/channel/UCFCS1cmD-9iM6nqetz-qXoA" :class="'btn btn-dark btn-sm'" target="_blank">
+                                Ver más Videos
+                                <i class="fas fa-arrow-circle-right" aria-hidden="true"></i>
+                            </a>
                         </div>
 
-                        <div class="carousel-item">
-                            <div class="row align-items-center">
-                                <div class="col-md-6 text-center">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/7AQnjKrdpyY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
-                                <div class="col-md-6">
-                                    <h3 class="mb-3 text-primary mt-3">#Desarrollo</h3>
-                                    <p class="text-justify">AGENCIA REGIONAL DE DESARROLLO POTENCIARÁ ECONOMÍA REGIONAL 💪</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="row align-items-center">
-                                <div class="col-md-6 text-center">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/moBoLDBxscs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
-                                <div class="col-md-6">
-                                    <h3 class="mb-3 text-primary mt-3">#Descentralización</h3>
-                                    <p class="text-justify">PRONTO AGENCIA REGIONAL DE DESARROLLO EN HUÁNUCO 💯</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="row align-items-center">
-                                <div class="col-md-6 text-center">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/C5dwGzYGhCw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
-                                <div class="col-md-6">
-                                    <h3 class="mb-3 text-primary mt-3">#Territorio</h3>
-                                    <p class="text-justify">GOBERNADOR RESPALDA LÍMITE SANTA VIRGINIA, PACHITEA</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-item">
-                            <div class="row align-items-center">
-                                <div class="col-md-6 text-center">
-                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RZ4Izygd_7k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                </div>
-                                <div class="col-md-6">
-                                    <h3 class="mb-3 text-primary mt-3"> #Transparencia </h3>
-                                    <p class="text-justify">XII CONSEJO DE MINISTROS DESCENTRALIZADO HUÁNUCO, RESULTADOS</p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div align="right" class="mt-2 p-2">
-                        <button class="carrolser_control btn btn-info btn-sm btn-circle" type="button" data-bs-target="#carrusel_video" data-bs-slide="prev" style="right: 50px !important;margin-botom:-5px">
-                            <span class="carousel-control-prev-icon " aria-hidden="true" style="width: 1rem !important; height: 1rem !important;"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carrolser_control btn btn-info btn-sm ml-2 btn-circle" type="button" data-bs-target="#carrusel_video" data-bs-slide="next" style="right: 0px !important;">
-                            <span class="carousel-control-next-icon" aria-hidden="true" style="width: 1rem !important; height: 1rem !important;"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-
-                        <a href="https://www.youtube.com/channel/UCFCS1cmD-9iM6nqetz-qXoA" class="btn btn-primary btn-sm">Ver más videos <i class="fas fa-arrow-circle-right" aria-hidden="true"></i> </a>
-
-                    </div>
-
-                </div>
-
+                
+            
             </div>
 
         </div>
@@ -330,7 +240,7 @@
     <b-modal ref="my-modal" buttonSize='sm' headerClass='p-0 border-bottom-0 ' hideHeaderClose footerClass='p-2 border-top-0' madalContentClass="p-0 bg-secondary" bodyClass="p-0" hide-footer centered>
         <template #modal-header="{ close }">
             <div class="d-flex justify-content-end">
-                <a @click="close()" class="bg-warning cerrar" height="550"><i class="fa-regular fa-circle-xmark fa-2x" style="margin-top:2px"></i></a>
+                <!-- <a @click="close()" class="bg-warning cerrar" height="550"><i class="fa-regular fa-circle-xmark fa-2x" style="margin-top:2px; margin-right: auto;"></i></a> -->
             </div>
         </template>
 
@@ -346,6 +256,7 @@
 <script>
 import Slidershow from './CarrouselPublicidad'
 import Slidernoticias from './Carrouselnoticias'
+import Slidervideos from './Carrouselvideos'
 import SliderEnlaces from './CarrouselEnlaces'
 import Anunciopopup from './anunciospopup'
 import Boletin from './carrouselboletin'
@@ -356,6 +267,7 @@ export default {
     components: {
         Slidershow,
         Slidernoticias,
+        Slidervideos,
         SliderEnlaces,
         Anunciopopup,
         Boletin
@@ -365,15 +277,27 @@ export default {
         return {
             listasecciones: {},
             hideHeaderClose: true,
-            centered: true
+            centered: true,
+            listapopup: {},
         }
     },
     mounted() {
         this.func_secciones();
-        this.showModal();
+        this.caragpopup();
+        // if (this.listapopup.length > 0) {
+        //     this.showModal();
+        // }
 
     },
     methods: {
+        caragpopup() {
+            var url = '/api/listapopup';
+            axios.get(url)
+                .then((result) => {
+                    this.listapopup = result.data.popup
+                    this.showModal();
+                });
+        },
         func_secciones() {
             var url = '/api/secciones';
             axios.get(url)
@@ -387,7 +311,7 @@ export default {
         },
         showModal() {
             this.$refs['my-modal'].show()
-            //   $('.modal-header').css('padding', '1px !important;');
+
         },
         decodeHtml(html) {
             //console.log(html);
@@ -612,7 +536,7 @@ h6 {
 }
 
 .anima_btn:hover {
-    background-color: #1db17878 ;
+    background-color: #1db17878;
 }
 
 .cerrar {
