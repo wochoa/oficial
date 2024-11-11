@@ -5,7 +5,7 @@
         <!-- <a :href="sec3.enlace" class="text-warning" target="_blank">
             <img :src="'http://gestionportales.regionhuanuco.gob.pe/storage/'+recorta_cadena(sec3.archivo_imagen)" width="300">
         </a> -->
-        <div :class="'row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-'+sec3.color">
+        <div :class="'row no-gutters rounded-2 overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-'+sec3.color">
             <div class="col-auto d-none d-lg-block">
 
                 <img :src="'http://gestionportales.regionhuanuco.gob.pe/storage/'+recorta_cadena(sec3.archivo_imagen)" width="300" alt="">

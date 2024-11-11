@@ -62,33 +62,16 @@
                     </div>
 
                     <!-- SECION 3-->
-                    <div class="row p-1" style="background: url('img/fondo/bg1.jpg'), #cfe2ff;border-radius: 4px ">
+                    <div class="row p-1 d-none d-sm-none d-md-block" style="background: url('img/fondo/bg1.jpg'), #cfe2ff;border-radius: 4px ">
                         <h4 class="text-center">Boletines </h4>
 
                         <Boletin :boletin="listasecciones" />
 
-                        <!-- <div class="col-md-6" v-for="sec3 in listasecciones" v-if="sec3.seccion_pag==3">
-                            <div :class="'row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-'+sec3.color">
-                                <div class="col-auto d-none d-lg-block">
-
-                                    <img :src="'http://gestionportales.regionhuanuco.gob.pe/storage/'+recorta_cadena(sec3.archivo_imagen)" width="200" alt="">
-                                </div>
-                                <div class="col p-4 d-flex flex-column position-static"  >
-
-                                    <div v-html="sec3.titulo">
-
-                                    </div>
-                                    <a :href="sec3.enlace" class="titulonot_2 text-warning" target="_blank">
-                                        {{ sec3.texto_enlace }} <i class="fas fa-arrow-circle-right" aria-hidden="true"></i></a>
-                                </div>
-
-                            </div>
-                        </div> -->
-
+                        
                     </div>
 
                 </div>
-                <div class="col-sm-2">
+                <div class="col-sm-2 d-none d-sm-none d-md-block">
                     <!-- SECCION 5  --->
                     <template v-for="(sec5,index5) in listasecciones" v-if="sec5.seccion_pag==5">
                         <a v-if="sec5.archivo_imagen!=null" :href="sec5.enlace" :class="'dropdown-item bg-'+sec5.color+' mb-1'" target="_blank">
@@ -191,7 +174,7 @@
     <!-- FIN UBICACIÓN-->
 
     <!-- ENLACES EXTERNOS-->
-    <div class="pt-3 pb-3" style="background:#cfe2ff;">
+    <div class="pt-3 pb-3  d-none d-sm-none d-md-block" style="background:#cfe2ff;">
         <div class="container">
             <h4 class="text-center">Enlaces Externos </h4>
             <hr />
