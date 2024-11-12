@@ -223,7 +223,7 @@
     <b-modal ref="my-modal" buttonSize='sm' headerClass='p-0 border-bottom-0 ' hideHeaderClose footerClass='p-2 border-top-0' madalContentClass="p-0 bg-secondary" bodyClass="p-0" hide-footer centered>
         <template #modal-header="{ close }">
             <div class="d-flex justify-content-end">
-                <!-- <a @click="close()" class="bg-warning cerrar" height="550"><i class="fa-regular fa-circle-xmark fa-2x" style="margin-top:2px; margin-right: auto;"></i></a> -->
+                <a @click="close()" class="bg-warning cerrar" height="550"><i class="fa-regular fa-circle-xmark fa-2x" style="margin-top:1px;"></i></a>
             </div>
         </template>
 
@@ -524,14 +524,16 @@ h6 {
 }
 
 .cerrar {
-    /* float: right; */
-    position: relative !important;
+
+    /* position: relative !important;
     padding-left: 1px;
     border-radius: 15px;
     width: 30px;
     margin-top: -30px;
-    margin-left: 1px;
+    margin-right: -2px;
     font-weight: bold;
+    z-index: 1051; */
+    position: absolute; top: -32px; right: 10px; padding-left: 1px; border-radius: 15px; width: 30px; margin-right: -2px; font-weight: bold; z-index: 1051;
 }
 
 .modal-header .modalheader {
