@@ -21,7 +21,7 @@ class Paginasweb extends Controller
     }
     public function menus()
     {
-        $enlace = "http://".request()->server('HTTP_HOST');
+        $enlace = "https://".request()->server('HTTP_HOST');
         
         $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->value('iddirecciones_web');
         $iddireccionweb=$portalesweb;//id de pagina web
@@ -38,7 +38,7 @@ class Paginasweb extends Controller
 
     public function convocatorias()
     {
-        $enlace = "http://".request()->server('HTTP_HOST');
+        $enlace = "https://".request()->server('HTTP_HOST');
         
         $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->value('iddirecciones_web');
         $iddireccionweb=$portalesweb;//id de pagina web
@@ -101,7 +101,7 @@ class Paginasweb extends Controller
     }
     public function noticiasini()
     {
-        $enlace = "http://".request()->server('HTTP_HOST');
+        $enlace = "https://".request()->server('HTTP_HOST');
         
         $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->value('iddirecciones_web');
         $iddireccionweb=$portalesweb;//id de pagina web
@@ -122,7 +122,7 @@ class Paginasweb extends Controller
 
     public function videosini()
     {
-        $enlace = "http://".request()->server('HTTP_HOST');
+        $enlace = "https://".request()->server('HTTP_HOST');
         
         $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->value('iddirecciones_web');
         $iddireccionweb=$portalesweb;//id de pagina web
@@ -145,7 +145,7 @@ class Paginasweb extends Controller
 
     public function pagina($id)
     {
-        $enlace = "http://".request()->server('HTTP_HOST');
+        $enlace = "https://".request()->server('HTTP_HOST');
         
         $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->value('iddirecciones_web');
         $iddireccionweb=$portalesweb;//id de pagina web
@@ -170,7 +170,7 @@ class Paginasweb extends Controller
     }
     public function enlacerefe()
     {
-        $enlace = "http://".request()->server('HTTP_HOST');
+        $enlace = "https://".request()->server('HTTP_HOST');
         
         $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->value('iddirecciones_web');
         
@@ -192,7 +192,7 @@ class Paginasweb extends Controller
         JSON_UNESCAPED_UNICODE);
     }
     public function secciones()
-    {   $enlace = "http://".request()->server('HTTP_HOST');
+    {   $enlace = "https://".request()->server('HTTP_HOST');
         
         $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->value('iddirecciones_web');
         $seccion=DB::table('secciones')->where(['activo'=>1,'iddirecciones_web'=>$portalesweb])->orderBy('seccion_pag','ASC')->orderBy('idseccion','DESC')->get();
@@ -203,7 +203,7 @@ class Paginasweb extends Controller
 
     public function allnoticias()
     {
-        $enlace = "http://".request()->server('HTTP_HOST');
+        $enlace = "https://".request()->server('HTTP_HOST');
         
         $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->value('iddirecciones_web');
 
@@ -220,7 +220,7 @@ class Paginasweb extends Controller
 
     public function detnoticias($id)
     {
-        $enlace = "http://".request()->server('HTTP_HOST');
+        $enlace = "https://".request()->server('HTTP_HOST');
         
         $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->value('iddirecciones_web');
 
@@ -245,7 +245,7 @@ class Paginasweb extends Controller
     }
     public function visitas()
     {
-        $enlace = "http://".request()->server('HTTP_HOST');
+        $enlace = "https://".request()->server('HTTP_HOST');
         
         $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->value('iddirecciones_web');
 
@@ -258,7 +258,7 @@ class Paginasweb extends Controller
     public function buscarvisita($bus)
     {
         
-        $enlace = "http://".request()->server('HTTP_HOST');
+        $enlace = "https://".request()->server('HTTP_HOST');
         
         $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->value('iddirecciones_web');
 
@@ -270,7 +270,7 @@ class Paginasweb extends Controller
 
     public function listapopup()
     {
-        $enlace = "http://".request()->server('HTTP_HOST');
+        $enlace = "https://".request()->server('HTTP_HOST');
         
         $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->value('iddirecciones_web');
         $publicacion=DB::table('popup')->where('activogral',1)->where('iddirecciones_web',$portalesweb)->orderBy('idpopup','DESC')->get();
@@ -283,7 +283,7 @@ class Paginasweb extends Controller
 
     public function tipodoc(Request $request)
     {
-        return Http::get('http://proyectos.regionhuanuco.gob.pe/regulations/tipo', $request->toArray())->json($key = null, $default = null);
+        return Http::get('https://proyectos.regionhuanuco.gob.pe/regulations/tipo', $request->toArray())->json($key = null, $default = null);
     }
 
     public function regulations(Request $request)
@@ -308,7 +308,7 @@ class Paginasweb extends Controller
         // }else{
         //     return $regulations->get();
         // }
-        return Http::get('http://proyectos.regionhuanuco.gob.pe/regulations', $request->toArray())->json($key = null, $default = null);
+        return Http::get('https://proyectos.regionhuanuco.gob.pe/regulations', $request->toArray())->json($key = null, $default = null);
     }
 
 
@@ -430,7 +430,7 @@ class Paginasweb extends Controller
    {
         
     //cargados el directorio regional
-    $enlace = "http://".request()->server('HTTP_HOST');        
+    $enlace = "https://".request()->server('HTTP_HOST');        
     $iddirweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->value('iddirecciones_web');
     // $listafag=DB::connection('bdgorehco')->table('fag')->orderByRaw('ano DESC')->paginate(12);
     $listafag=DB::table('fag')->where('iddirecciones_web',$iddirweb)->orderByRaw('ano DESC')->paginate(12);
@@ -445,7 +445,7 @@ class Paginasweb extends Controller
    public function slider()
    {
     //cargados el directorio regional
-    $enlace = "http://".request()->server('HTTP_HOST'); 
+    $enlace = "https://".request()->server('HTTP_HOST'); 
     $iddirweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->value('iddirecciones_web'); 
     $slider=DB::table('slider')->where(['iddirecciones_web'=>$iddirweb,'activo_slider'=>1])->orderBy('idslider','DESC')->get();
     return response()->json(['slider'=>$slider],200, ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'],JSON_UNESCAPED_UNICODE); 
@@ -454,7 +454,7 @@ class Paginasweb extends Controller
    public function tema()
    {   $dnsserver=env('URL_TEMA');
 
-       $enlace = "http://".request()->server('HTTP_HOST');
+       $enlace = "https://".request()->server('HTTP_HOST');
        $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->get();
        $direccionweb=$portalesweb[0]->iddirecciones_web;//3;// 3: direccion regional de educacion -> este dato se saco del registyro de bd de direcciones_web
        $nombredireccionweb=$portalesweb[0]->nom_direcciones_web;
