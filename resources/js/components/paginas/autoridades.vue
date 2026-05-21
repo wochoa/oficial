@@ -85,7 +85,7 @@
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="lead"><b>ECON. PERCY REÁTEGUI PICÓN</b></h2>
+                                            <h2 class="lead"><b>ING. RONALD ACUÑA SOBRADOS</b></h2>
                                             <p class="text-warning text-sm"><b>GERENTE GENERAL REGIONAL: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-warning">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>xxxxxx</li>
@@ -145,7 +145,7 @@
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="lead"><b>ECON. CESAR EUCLIDES BERNARDO HILARIO</b></h2>
+                                            <h2 class="lead"><b>OSWALDO ANIBAL OLMOS CUELLO</b></h2>
                                             <p class="text-muted text-sm"><b>GERENTE REGIONAL DE PLANEAMIENTO, PRESUPUESTO Y ACONDICIONAMIENTO TERRITORIAL: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-muted">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>xxxxxx</li>
@@ -175,7 +175,7 @@
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="lead"><b>MARCO AUGUSTO MINAYA MARTEL</b></h2>
+                                            <h2 class="lead"><b>ARTHUR JAVIER ANTONIO ARCE SAAVEDRA</b></h2>
                                             <p class="text-muted text-sm"><b>GERENTE REGIONAL DE DESARROLLO ECONOMICO: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-muted">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>xxxxxx</li>
@@ -205,7 +205,7 @@
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="lead"><b>JOSE LUIS LLANOS ARRIETA</b></h2>
+                                            <h2 class="lead"><b>JHONNY WALTER BALDEON VASQUEZ</b></h2>
                                             <p class="text-muted text-sm"><b>GERENTE REGIONAL DE ADMINISTRACION: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-muted">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>xxxxxx</li>
@@ -235,7 +235,7 @@
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="lead"><b>ARTHUR JAVIER ANTONIO ARCE SAAVEDRA</b></h2>
+                                            <h2 class="lead"><b>JOSE LUIS RODRIGUEZ INFANTE</b></h2>
                                             <p class="text-muted text-sm"><b>GERENTE REGIONAL DE RECURSOS NATURALES Y GESTION AMBIENTAL: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-muted">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>xxxxxx</li>
@@ -265,7 +265,7 @@
                                 <div class="card-body pt-0">
                                     <div class="row">
                                         <div class="col-7">
-                                            <h2 class="lead"><b>ALBERTO EBER CONTRERAS MARIÑO</b></h2>
+                                            <h2 class="lead"><b>TEOFILO LOARTE ALVARADO</b></h2>
                                             <p class="text-muted text-sm"><b>GERENTE REGIONAL DE DESARROLLO SOCIAL: </b> -</p>
                                             <ul class="ml-4 mb-0 fa-ul text-muted">
                                                 <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>xxxxx</li>
