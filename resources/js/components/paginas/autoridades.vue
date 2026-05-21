@@ -317,6 +317,518 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                            <div class="card bg-light">
+                                <div class="card-header text-muted border-bottom-0">
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="lead"><b>ECON. GUADALUPE LOAS JARAMILLO</b></h2>
+                                            <p class="text-muted text-sm"><b>SUB GERENTE DE ACONDICIONAMIENTO TERRITORIAL: </b> -</p>
+                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>..</li>
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                            <img :src="ruta+'/img/gerentes2025/11.jpg'" alt="" class="img-circle img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-right">
+
+                                        <a href="#" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-user"></i> Ver C.V.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                            <div class="card bg-light">
+                                <div class="card-header text-muted border-bottom-0">
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="lead"><b>ECON. LEIBNITZ JUVENCIO BERROSPI ORTEGA</b></h2>
+                                            <p class="text-muted text-sm"><b>SUB GERENTE DE PRESUPUESTO PÚBLICO: </b> -</p>
+                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>..</li>
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                            <img :src="ruta+'/img/gerentes2025/14.jpg'" alt="" class="img-circle img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-right">
+
+                                        <a href="#" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-user"></i> Ver C.V.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                            <div class="card bg-light">
+                                <div class="card-header text-muted border-bottom-0">
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="lead"><b>JORGE TEODORO REATEGUI CALDERON</b></h2>
+                                            <p class="text-muted text-sm"><b>SUB GERENTE DE CONTABILIDAD: </b> -</p>
+                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>..</li>
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                            <img :src="ruta+'/img/gerentes2025/Subgerencia_Contabilidad.jpeg'" alt="" class="img-circle img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-right">
+
+                                        <a href="#" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-user"></i> Ver C.V.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                            <div class="card bg-light">
+                                <div class="card-header text-muted border-bottom-0">
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="lead"><b>VICTOR KENYI PRUDENCIO CHACÓN</b></h2>
+                                            <p class="text-muted text-sm"><b>SUB GERENTE DE RECURSOS NATURALES: </b> -</p>
+                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>..</li>
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                            <img :src="ruta+'/img/gerentes2025/16.jpg'" alt="" class="img-circle img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-right">
+
+                                        <a href="#" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-user"></i> Ver C.V.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                            <div class="card bg-light">
+                                <div class="card-header text-muted border-bottom-0">
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="lead"><b>LUISIÑO INOCENTE ROSAS HERRERA</b></h2>
+                                            <p class="text-muted text-sm"><b>SUB GERENTE DE ESTUDIOS: </b> -</p>
+                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>..</li>
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                            <img :src="ruta+'/img/gerentes2025/19.jpg'" alt="" class="img-circle img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-right">
+
+                                        <a href="#" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-user"></i> Ver C.V.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                            <div class="card bg-light">
+                                <div class="card-header text-muted border-bottom-0">
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="lead"><b>JAQUELINE MARIBEL BERAÚN HURTADO</b></h2>
+                                            <p class="text-muted text-sm"><b>SUB GERENTE DE TESORERÍA: </b> -</p>
+                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>..</li>
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                            <img :src="ruta+'/img/gerentes2025/20.jpg'" alt="" class="img-circle img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-right">
+
+                                        <a href="#" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-user"></i> Ver C.V.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                            <div class="card bg-light">
+                                <div class="card-header text-muted border-bottom-0">
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="lead"><b>GUSTAVO BARRERA SULCA</b></h2>
+                                            <p class="text-muted text-sm"><b>DIRECTOR REGIONAL DE SALUD: </b> -</p>
+                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>..</li>
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                            <img :src="ruta+'/img/gerentes2025/24.jpg'" alt="" class="img-circle img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-right">
+
+                                        <a href="#" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-user"></i> Ver C.V.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                            <div class="card bg-light">
+                                <div class="card-header text-muted border-bottom-0">
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="lead"><b>KELVIN AUGUSTO ALVAREZ MATOS</b></h2>
+                                            <p class="text-muted text-sm"><b>DIRECTOR REGIONAL DE EDUCACIÓN: </b> -</p>
+                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>..</li>
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                            <img :src="ruta+'/img/gerentes2025/25.jpg'" alt="" class="img-circle img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-right">
+
+                                        <a href="#" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-user"></i> Ver C.V.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                            <div class="card bg-light">
+                                <div class="card-header text-muted border-bottom-0">
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="lead"><b>LUIS ALBERTO VILLAVICENCIO LEON</b></h2>
+                                            <p class="text-muted text-sm"><b>SUB GERENTE DE PLANEAMIENTO ESTRATÉGICO: </b> -</p>
+                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>..</li>
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                            <img :src="ruta+'/img/gerentes2025/27.jpg'" alt="" class="img-circle img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-right">
+
+                                        <a href="#" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-user"></i> Ver C.V.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                            <div class="card bg-light">
+                                <div class="card-header text-muted border-bottom-0">
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="lead"><b>KENNY KEVIN TUESTA RODRÍGUEZ</b></h2>
+                                            <p class="text-muted text-sm"><b>SUB GERENTE DE FORMULACIÓN Y EVALUACIÓN DE ESTUDIOS DE PREINVERSIÓN: </b> -</p>
+                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>..</li>
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                            <img :src="ruta+'/img/gerentes2025/28.jpg'" alt="" class="img-circle img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-right">
+
+                                        <a href="#" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-user"></i> Ver C.V.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                            <div class="card bg-light">
+                                <div class="card-header text-muted border-bottom-0">
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="lead"><b>SARA ESTELA RIVERA ALMERCO</b></h2>
+                                            <p class="text-muted text-sm"><b>DIRECTORA DE LA ALDEA  INFANTIL SAN JUAN BOSCO: </b> -</p>
+                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>..</li>
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                            <img :src="ruta+'/img/gerentes2025/ALDEA.jpg'" alt="" class="img-circle img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-right">
+
+                                        <a href="#" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-user"></i> Ver C.V.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                            <div class="card bg-light">
+                                <div class="card-header text-muted border-bottom-0">
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="lead"><b>JORGE LUIS ANGULO MORALES</b></h2>
+                                            <p class="text-muted text-sm"><b>DIRECTOR DE ARCHIVO REGIONAL: </b> -</p>
+                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>..</li>
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                            <img :src="ruta+'/img/gerentes2025/ARCHIVO.png'" alt="" class="img-circle img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-right">
+
+                                        <a href="#" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-user"></i> Ver C.V.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                            <div class="card bg-light">
+                                <div class="card-header text-muted border-bottom-0">
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="lead"><b>JUAN PEDRO OLIVEROS DENEGRI</b></h2>
+                                            <p class="text-muted text-sm"><b>JEFE DE LA OFICINA DE ATENCION AL CIUDADANO Y GESTION DOCUMENTAL: </b> -</p>
+                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>..</li>
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                            <img :src="ruta+'/img/gerentes2025/ATENCION.png'" alt="" class="img-circle img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-right">
+
+                                        <a href="#" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-user"></i> Ver C.V.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                            <div class="card bg-light">
+                                <div class="card-header text-muted border-bottom-0">
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="lead"><b>ALONSO ROMERO BOBADILLA</b></h2>
+                                            <p class="text-muted text-sm"><b>DIRECTOR REGIONAL DE GESTION DE RIESGO DE DESASTRES, DEFENSA NACIONAL Y SEGUIDAD CIUDADANA: </b> -</p>
+                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>..</li>
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                            <img :src="ruta+'/img/gerentes2025/Coer.jpeg'" alt="" class="img-circle img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-right">
+
+                                        <a href="#" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-user"></i> Ver C.V.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                            <div class="card bg-light">
+                                <div class="card-header text-muted border-bottom-0">
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="lead"><b>GUILLERMO NICOLAS PAZ PANTA</b></h2>
+                                            <p class="text-muted text-sm"><b>DIRECTOR DE LA OFICINA REGIONAL DE COOPERACION INTERNACIONAL: </b> -</p>
+                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>..</li>
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                            <img :src="ruta+'/img/gerentes2025/COPERACION.png'" alt="" class="img-circle img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-right">
+
+                                        <a href="#" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-user"></i> Ver C.V.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                            <div class="card bg-light">
+                                <div class="card-header text-muted border-bottom-0">
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="lead"><b>ELFER ALONSO ROMERO BOBADILLA</b></h2>
+                                            <p class="text-muted text-sm"><b>DIRECTOR DE LA OFICINA REGIONAL DE GESTIÓN EN CONFLICTOS Y DE DIALOGO: </b> -</p>
+                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>..</li>
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                            <img :src="ruta+'/img/gerentes2025/DRORGCD.jpeg'" alt="" class="img-circle img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-right">
+
+                                        <a href="#" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-user"></i> Ver C.V.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch">
+                            <div class="card bg-light">
+                                <div class="card-header text-muted border-bottom-0">
+                                    <!-- {{-- PROVINTE HUÁNUCO --}} -->
+                                </div>
+                                <div class="card-body pt-0">
+                                    <div class="row">
+                                        <div class="col-7">
+                                            <h2 class="lead"><b>WALTHER RAUL II BENJAMIN AGUIRRE TELLO</b></h2>
+                                            <p class="text-muted text-sm"><b>SUB GERENCIA DE MODERNIZACIÓN Y TRANSFORMACIÓN DIGITAL: </b> -</p>
+                                            <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-mail-bulk"></i></span>..</li>
+                                                <li class="small"><span class="fa-li"><i class="fas fa-lg fa-phone"></i></span> Telefono #: xxxxx</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-5 text-center">
+                                            <img :src="ruta+'/img/gerentes2025/SGMTD.png'" alt="" class="img-circle img-fluid">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="text-right">
+
+                                        <a href="#" class="btn btn-sm btn-primary">
+                                            <i class="fas fa-user"></i> Ver C.V.
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
 
                     </div>
                 </div>
