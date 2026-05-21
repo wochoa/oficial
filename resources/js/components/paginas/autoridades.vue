@@ -93,7 +93,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-5 text-center">
-                                            <img :src="ruta+'/img/gerentes/0.jpg'" alt="" class="img-circle img-fluid">
+                                            <img :src="ruta+'/img/gerentes2025/GGR.jpg'" alt="" class="img-circle img-fluid">
                                         </div>
                                     </div>
                                 </div>
@@ -123,7 +123,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-5 text-center">
-                                            <img :src="ruta+'/img/gerentes/0.jpg'" alt="" class="img-circle img-fluid">
+                                            <img :src="ruta+'/img/gerentes2025/18.jpg'" alt="" class="img-circle img-fluid">
                                         </div>
                                     </div>
                                 </div>
@@ -153,7 +153,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-5 text-center">
-                                            <img :src="ruta+'/img/gerentes/0.jpg'" alt="" class="img-circle img-fluid">
+                                            <img :src="ruta+'/img/gerentes2025/grppat.jpeg'" alt="" class="img-circle img-fluid">
                                         </div>
                                     </div>
                                 </div>
@@ -183,7 +183,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-5 text-center">
-                                            <img :src="ruta+'/img/gerentes/0.jpg'" alt="" class="img-circle img-fluid">
+                                            <img :src="ruta+'/img/gerentes2025/GRDE.jpg'" alt="" class="img-circle img-fluid">
                                         </div>
                                     </div>
                                 </div>
@@ -213,7 +213,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-5 text-center">
-                                            <img :src="ruta+'/img/gerentes/0.jpg'" alt="" class="img-circle img-fluid">
+                                            <img :src="ruta+'/img/gerentes2025/ADMIN.jpeg'" alt="" class="img-circle img-fluid">
                                         </div>
                                     </div>
                                 </div>
@@ -243,7 +243,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-5 text-center">
-                                            <img :src="ruta+'/img/gerentes/0.jpg'" alt="" class="img-circle img-fluid">
+                                            <img :src="ruta+'/img/gerentes2025/ambiental.jpeg'" alt="" class="img-circle img-fluid">
                                         </div>
                                     </div>
                                 </div>
@@ -303,7 +303,7 @@
                                             </ul>
                                         </div>
                                         <div class="col-5 text-center">
-                                            <img :src="ruta+'/img/gerentes/0.jpg'" alt="" class="img-circle img-fluid">
+                                            <img :src="ruta+'/img/gerentes2025/GRI.jpg'" alt="" class="img-circle img-fluid">
                                         </div>
                                     </div>
                                 </div>
