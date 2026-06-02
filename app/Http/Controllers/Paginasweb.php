@@ -149,11 +149,12 @@ class Paginasweb extends Controller
     {
         $enlace = "https://".request()->server('HTTP_HOST');
         
-        $menus=DB::table('menus')->where(['idmenus'=>113,'idmenus'=>114])->orderBy('idmenus','ASC')->get();
+        $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->value('iddirecciones_web');
+        $iddireccionweb=$portalesweb;//id de pagina web
 
         $datos=DB::table('pagina')->where(['id_pagina'=>$id,'iddirecciones_web'=>$iddireccionweb])->get();
 
-
+        
         //$datos=array('id'=>$id,'nom_pagina'=>$nom_pagina,'nom_archivophp'=> $nom_archivophp,'cont_pagina'=>$cont_pagina,'fecha_pag'=>$fecha_pag,'activo_pag'=>$activo_pag,'iddirecciones_web'=>$iddirecciones_web,'iduser'=>$iduser,'created_at'=>$created_at,'updated_at'=>$updated_at);
 
         return response()->json(['pagina'=>$datos],200, ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'],
