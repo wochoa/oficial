@@ -21,6 +21,7 @@ use App\Http\Controllers\procompite;
 // });
 route::get('/menus',[Paginasweb::class,'menus'])->name('menus');
 route::get('/pagina/{id}',[Paginasweb::class,'pagina'])->name('pagina');
+route::get('/gesambiental',[Paginasweb::class,'gesambiental'])->name('gesambiental');
 route::get('/convocatorias',[Paginasweb::class,'convocatorias'])->name('convocatorias');
 route::get('/noticiasini',[Paginasweb::class,'noticiasini'])->name('noticiasini');
 route::get('/videosini',[Paginasweb::class,'videosini'])->name('videosini');

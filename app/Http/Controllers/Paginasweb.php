@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
 use App\Models\Normatividad\RegulationsTipo;
 use App\Models\Normatividad\Regulation;
+use App\Models\Menu;
+use App\Models\Submenu;
 
 class Paginasweb extends Controller
 {
@@ -147,27 +149,39 @@ class Paginasweb extends Controller
     {
         $enlace = "https://".request()->server('HTTP_HOST');
         
-        $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->value('iddirecciones_web');
-        $iddireccionweb=$portalesweb;//id de pagina web
+        $menus=DB::table('menus')->where(['idmenus'=>113,'idmenus'=>114])->orderBy('idmenus','ASC')->get();
 
         $datos=DB::table('pagina')->where(['id_pagina'=>$id,'iddirecciones_web'=>$iddireccionweb])->get();
 
-        $id=$datos[0]->id_pagina;
-        $nom_pagina=$datos[0]->nom_pagina;//utf8_decode($datos[0]->nom_pagina);
-        $nom_archivophp=$datos[0]->nom_archivophp;
-        $cont_pagina=$datos[0]->cont_pagina;//utf8_decode($datos[0]->cont_pagina);
-        $fecha_pag=$datos[0]->fecha_pag;
-        $activo_pag=$datos[0]->activo_pag;
-        $iddirecciones_web=$datos[0]->iddirecciones_web;
-        $iduser=$datos[0]->iduser;
-        $created_at=$datos[0]->created_at;
-        $updated_at=$datos[0]->updated_at;
 
         //$datos=array('id'=>$id,'nom_pagina'=>$nom_pagina,'nom_archivophp'=> $nom_archivophp,'cont_pagina'=>$cont_pagina,'fecha_pag'=>$fecha_pag,'activo_pag'=>$activo_pag,'iddirecciones_web'=>$iddirecciones_web,'iduser'=>$iduser,'created_at'=>$created_at,'updated_at'=>$updated_at);
 
         return response()->json(['pagina'=>$datos],200, ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'],
         JSON_UNESCAPED_UNICODE);
     }
+
+    public function gesambiental()
+    {
+        $enlace = "https://".request()->server('HTTP_HOST');
+
+        $portalesweb=DB::table('direcciones_web')->where('dns_direcciones_web',$enlace)->value('iddirecciones_web');
+        $iddireccionweb=$portalesweb;//id de pagina web
+
+        // menus cargando sus submenus y paginas asociadas (con validaciones de estado y dirección web)
+        $menus = Menu::with(['submenus' => function($query) {
+            $query->where('activo_submenu', 1);
+        }, 'submenus.pagina'])
+        ->whereIn('idmenus', [113, 114])
+        ->where('iddirecciones_web', $iddireccionweb)
+        ->orderBy('idmenus', 'ASC')
+        ->get();
+
+        $datos=DB::table('pagina')->where(['nom_archivophp'=>'ambiental.php','iddirecciones_web'=>$iddireccionweb])->get();
+
+        return response()->json(['pagina'=>$datos, 'menus'=>$menus],200, ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'],
+        JSON_UNESCAPED_UNICODE);
+    }
+
     public function enlacerefe()
     {
         $enlace = "https://".request()->server('HTTP_HOST');
@@ -283,7 +297,7 @@ class Paginasweb extends Controller
 
     public function tipodoc(Request $request)
     {
-        return Http::get('https://proyectos.regionhuanuco.gob.pe/regulations/tipo', $request->toArray())->json($key = null, $default = null);
+        return https::get('https://proyectos.regionhuanuco.gob.pe/regulations/tipo', $request->toArray())->json($key = null, $default = null);
     }
 
     public function regulations(Request $request)
@@ -308,7 +322,7 @@ class Paginasweb extends Controller
         // }else{
         //     return $regulations->get();
         // }
-        return Http::get('https://proyectos.regionhuanuco.gob.pe/regulations', $request->toArray())->json($key = null, $default = null);
+        return https::get('https://proyectos.regionhuanuco.gob.pe/regulations', $request->toArray())->json($key = null, $default = null);
     }
 
 
@@ -513,4 +527,3 @@ class Paginasweb extends Controller
 
     
 }
-

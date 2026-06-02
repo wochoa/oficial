@@ -1,0 +1,16 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Pagina extends Model
+{
+    protected $table = 'pagina';
+    protected $primaryKey = 'id_pagina';
+
+    public function submenus()
+    {
+        return $this->hasMany(Submenu::class, 'idpagina', 'id_pagina');
+    }
+}
