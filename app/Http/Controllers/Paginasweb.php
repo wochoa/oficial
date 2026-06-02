@@ -297,7 +297,7 @@ class Paginasweb extends Controller
 
     public function tipodoc(Request $request)
     {
-        return https::get('https://proyectos.regionhuanuco.gob.pe/regulations/tipo', $request->toArray())->json($key = null, $default = null);
+        return http::get('https://proyectos.regionhuanuco.gob.pe/regulations/tipo', $request->toArray())->json($key = null, $default = null);
     }
 
     public function regulations(Request $request)
@@ -322,7 +322,7 @@ class Paginasweb extends Controller
         // }else{
         //     return $regulations->get();
         // }
-        return https::get('https://proyectos.regionhuanuco.gob.pe/regulations', $request->toArray())->json($key = null, $default = null);
+        return http::get('https://proyectos.regionhuanuco.gob.pe/regulations', $request->toArray())->json($key = null, $default = null);
     }
 
 
