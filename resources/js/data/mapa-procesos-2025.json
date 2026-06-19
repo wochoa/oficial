@@ -1,0 +1,575 @@
+{
+  "titulo": "Mapa de Procesos Nivel 0",
+  "subtitulo": "Inventario de procesos nivel 0 y nivel 1 del Gobierno Regional Huánuco 2025",
+  "version": "2025",
+  "resumen": {
+    "nivel0": 16,
+    "nivel1": 74
+  },
+  "grupos": [
+    {
+      "id": "estrategicos",
+      "titulo": "Procesos Estratégicos",
+      "codigo": "E",
+      "clase": "estrategico",
+      "procesos": [
+        {
+          "codigo": "E1",
+          "nombre": "Direccionamiento Estratégico",
+          "ficha": {
+            "version": "3.0",
+            "tipo": "Estrategico",
+            "objetivo": "Gestionar oportunamente el marco estrategico, institucional y operativo para el desarrollo territorial regional sostenible.",
+            "dueno": [
+              "Gerencia Regional de Planeamiento, Presupuesto y Acondicionamiento Territorial",
+              "Sub Gerencia de Planeamiento Estrategico",
+              "Sub Gerencia de Presupuesto Publico",
+              "Sub Gerencia Programacion Multianual de Inversiones"
+            ],
+            "objetivoEstrategico": [
+              "OEI.06 - Garantizar una gestion institucional orientada al ciudadano.",
+              "AEI.06.02 - Control y seguimiento efectiva y oportuna de los procesos presupuestarios del Gobierno Regional Huanuco.",
+              "AEI.06.03 - Instrumentos de programacion de inversiones de impacto regional, orientados al cierre de brechas prioritarias.",
+              "AEI.06.04 - Registro de inversiones actualizado y oportuno del Gobierno Regional Huanuco.",
+              "AEI.06.07 - Planeamiento Estrategico eficiente y permanente del Gobierno Regional Huanuco."
+            ]
+          },
+          "descripcion": [
+            {
+              "proveedor": "Población",
+              "entrada": "Necesidades",
+              "codigo": "E1.1",
+              "proceso": "Desarrollo de planes y politicas regionales",
+              "responsable": "Sub Gerencia de Planeamiento Estrategico",
+              "producto": [
+                "Politicas regionales",
+                "Plan Desarrollo Regional Concertado (PDRC)",
+                "Plan Desarrollo Regional Concertado actualizado (PDRC)",
+                "Presupuesto participativo basado en resultados"
+              ],
+              "receptor": [
+                "E1.2 Desarrollo de planes institucionales",
+                "Sociedad civil",
+                "Gobiernos Subnacionales",
+                "CEPLAN",
+                "E1.3 Desarrollo de la cartera de inversiones multianual"
+              ]
+            },
+            {
+              "proveedor": "Ministerios",
+              "entrada": "Plan Estrategico Sectorial Multianual (PESEM)",
+              "codigo": "E1.2",
+              "proceso": "Desarrollo de planes institucionales",
+              "responsable": "Sub Gerencia de Planeamiento Estrategico",
+              "producto": [
+                "Plan Estrategico Institucional (PEI)",
+                "Plan Operativo Institucional (POI)",
+                "Informe de evaluacion del POI / PEI"
+              ],
+              "receptor": [
+                "CEPLAN",
+                "Unidades de organizacion",
+                "E1.3 Desarrollo de la cartera de inversiones multianual"
+              ]
+            },
+            {
+              "proveedor": "DGPP - MEF",
+              "entrada": "Ley de presupuesto anual del sector publico para el siguiente ano fiscal / Asignacion presupuestal (diploma)",
+              "codigo": "E1.2",
+              "proceso": "Desarrollo de planes institucionales",
+              "responsable": "Sub Gerencia de Presupuesto Publico",
+              "producto": [
+                "Presupuesto Institucional de Apertura (PIA)",
+                "Presupuesto Institucional Modificado (PIM)"
+              ],
+              "receptor": [
+                "Unidades de organizacion",
+                "DGPP - MEF"
+              ]
+            },
+            {
+              "proveedor": "E1.1 Desarrollo de planes y politicas regionales",
+              "entrada": "Plan de Desarrollo Regional Concertado (PDRC), Presupuesto participativo basado en resultados",
+              "codigo": "E1.3",
+              "proceso": "Desarrollo de la cartera de inversiones multianual",
+              "responsable": "Sub Gerencia Programacion Multianual de Inversiones, Sub Gerencia de Planeamiento Estrategico, Unidad formuladora / Unidad ejecutora, Sub Gerencia de la Inversion privada sostenible",
+              "producto": [
+                "PMI",
+                "Cartera de inversiones multianual"
+              ],
+              "receptor": [
+                "S4.1 Formulacion y evaluacion de programa/proyectos de inversion y registro y aprobacion de IOARR"
+              ]
+            }
+          ],
+          "indicadores": [
+            {
+              "codigo": "E1-IND-1",
+              "nombre": "Numero de instrumentos de gestion vigentes",
+              "producto": [
+                "Politicas regionales",
+                "Plan de Desarrollo Regional Concertado (PDRC)"
+              ],
+              "tipo": "Estrategico",
+              "justificacion": "Medir el numero de instrumentos de gestion vigentes en marco de las normas.",
+              "responsable": {
+                "medicion": "Sub Gerencia de Planeamiento Estrategico",
+                "accion": "Gerencia Regional de Planeamiento, Presupuesto y Acondicionamiento Territorial / Sub Gerencia de Planeamiento Estrategico"
+              },
+              "formula": "N",
+              "donde": "N: Numero de instrumentos de gestion vigentes",
+              "sentido": "Ascendente",
+              "unidad": "Numero",
+              "frecuencia": "Anual",
+              "fuente": "Registro de Ordenanzas Regionales",
+              "lineaBase": {
+                "anio": "2024",
+                "valor": "1"
+              },
+              "logros": [
+                { "anio": "2025", "valor": "2" },
+                { "anio": "2026", "valor": "2" },
+                { "anio": "2027", "valor": "3" },
+                { "anio": "2028", "valor": "3" }
+              ]
+            },
+            {
+              "codigo": "E1-IND-2",
+              "nombre": "Porcentaje del presupuesto institucional ejecutado del Gobierno Regional Huanuco",
+              "producto": [
+                "Presupuesto Institucional de Apertura (PIA)",
+                "Presupuesto Institucional modificado (PIM)"
+              ],
+              "tipo": "Estrategico",
+              "justificacion": "Permite medir el nivel de ejecucion anual del presupuesto institucional del Gobierno Regional de Huanuco.",
+              "responsable": {
+                "medicion": "Sub Gerencia de Presupuesto Publico",
+                "accion": "Gerencia Regional de Planeamiento, Presupuesto y Acondicionamiento Territorial"
+              },
+              "formula": "(N/D) x 100",
+              "donde": "N: Devengado. D: PIM (Presupuesto Institucional Modificado).",
+              "sentido": "Ascendente",
+              "unidad": "Porcentaje",
+              "frecuencia": "Anual",
+              "fuente": "Sistema integrado de administracion financiera - SIAF web",
+              "lineaBase": {
+                "anio": "2024",
+                "valor": "89.60%"
+              },
+              "logros": [
+                { "anio": "2025", "valor": "92%" },
+                { "anio": "2026", "valor": "93%" },
+                { "anio": "2027", "valor": "94%" },
+                { "anio": "2028", "valor": "95%" }
+              ]
+            }
+          ],
+          "nivel1": [
+            {
+              "codigo": "E1.1",
+              "nombre": "Desarrollo de planes y politicas regionales"
+            },
+            {
+              "codigo": "E1.2",
+              "nombre": "Desarrollo de planes institucionales"
+            },
+            {
+              "codigo": "E1.3",
+              "nombre": "Desarrollo de la cartera de inversiones multianual"
+            }
+          ]
+        },
+        {
+          "codigo": "E2",
+          "nombre": "Gestion del Desarrollo y Modernizacion Institucional",
+          "nivel1": [
+            {
+              "codigo": "E2.1",
+              "nombre": "Diseno del modelo organizacional"
+            },
+            {
+              "codigo": "E2.2",
+              "nombre": "Mejora de procesos y procedimientos"
+            },
+            {
+              "codigo": "E2.3",
+              "nombre": "Evaluacion de los procesos y procedimientos"
+            }
+          ]
+        },
+        {
+          "codigo": "E3",
+          "nombre": "Gestion de Alianzas y Posicionamiento Institucional",
+          "nivel1": [
+            {
+              "codigo": "E3.1",
+              "nombre": "Promover la participacion de actores de la sociedad civil"
+            },
+            {
+              "codigo": "E3.2",
+              "nombre": "Gestion de comunicacion e imagen institucional"
+            },
+            {
+              "codigo": "E3.3",
+              "nombre": "Articular las relaciones intergubernamentales y/o intersectoriales"
+            }
+          ]
+        },
+        {
+          "codigo": "E4",
+          "nombre": "Gestion del Sistema de Control Interno y la Integridad Institucional",
+          "nivel1": [
+            {
+              "codigo": "E4.1",
+              "nombre": "Administracion de riesgos"
+            },
+            {
+              "codigo": "E4.2",
+              "nombre": "Planeamiento del Sistema de Control Interno"
+            },
+            {
+              "codigo": "E4.3",
+              "nombre": "Evaluacion del desarrollo del Sistema de Control Interno"
+            },
+            {
+              "codigo": "E4.4",
+              "nombre": "Monitoreo de Control Simultaneo y de Control Posterior"
+            },
+            {
+              "codigo": "E4.5",
+              "nombre": "Promocion de la Integridad"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "misionales",
+      "titulo": "Procesos Misionales",
+      "codigo": "M",
+      "clase": "misional",
+      "procesos": [
+        {
+          "codigo": "M1",
+          "nombre": "Gestion del Desarrollo Social",
+          "nivel1": [
+            {
+              "codigo": "M1.1",
+              "nombre": "Gestion integral de recursos para el desarrollo de los servicios sociales"
+            },
+            {
+              "codigo": "M1.2",
+              "nombre": "Fortalecimiento de capacidades para la mejora de servicios sociales"
+            },
+            {
+              "codigo": "M1.3",
+              "nombre": "Otorgamiento de certificados y autorizaciones en materia social"
+            },
+            {
+              "codigo": "M1.4",
+              "nombre": "Prestacion de servicios sociales"
+            },
+            {
+              "codigo": "M1.5",
+              "nombre": "Monitoreo, seguimiento y evaluacion a los espacios de articulacion y evaluacion del servicio social"
+            }
+          ]
+        },
+        {
+          "codigo": "M2",
+          "nombre": "Gestion de la Competitividad Economica y Productiva",
+          "nivel1": [
+            {
+              "codigo": "M2.1",
+              "nombre": "Articulacion comercial"
+            },
+            {
+              "codigo": "M2.2",
+              "nombre": "Fortalecimiento de capacidades en materia economica y productiva"
+            },
+            {
+              "codigo": "M2.3",
+              "nombre": "Otorgamiento de certificados y autorizaciones en materia social"
+            },
+            {
+              "codigo": "M2.4",
+              "nombre": "Otorgamiento de concesiones, autorizaciones y aprobaciones en materia economica y productiva"
+            }
+          ]
+        },
+        {
+          "codigo": "M3",
+          "nombre": "Integracion Territorial Regional",
+          "nivel1": [
+            {
+              "codigo": "M3.1",
+              "nombre": "Autorizaciones de servicio transporte terrestre"
+            },
+            {
+              "codigo": "M3.2",
+              "nombre": "Programacion de actividades viales y telecomunicacion"
+            },
+            {
+              "codigo": "M3.3",
+              "nombre": "Supervision y Monitoreo de las estaciones de radio y comunicaciones"
+            },
+            {
+              "codigo": "M3.4",
+              "nombre": "Prevencion vial"
+            },
+            {
+              "codigo": "M3.5",
+              "nombre": "Autorizacion de las vias Regionales"
+            },
+            {
+              "codigo": "M3.6",
+              "nombre": "Gestion de demarcacion territorial"
+            },
+            {
+              "codigo": "M3.7",
+              "nombre": "Administracion del IDER"
+            },
+            {
+              "codigo": "M3.8",
+              "nombre": "Zonificacion Ecologica Economica - ZEE"
+            }
+          ]
+        },
+        {
+          "codigo": "M4",
+          "nombre": "Gestion Ambiental y de Riesgo de Desastres",
+          "nivel1": [
+            {
+              "codigo": "M4.1",
+              "nombre": "Desarrollo de planes ambientales y de recursos naturales"
+            },
+            {
+              "codigo": "M4.2",
+              "nombre": "Fortalecimiento de capacidades entorno a la educacion ambiental"
+            },
+            {
+              "codigo": "M4.3",
+              "nombre": "Gestion de areas de los recursos naturales y diversidad biologica"
+            },
+            {
+              "codigo": "M4.4",
+              "nombre": "Fiscalizacion ambiental"
+            },
+            {
+              "codigo": "M4.5",
+              "nombre": "Evaluacion y aprobacion de instrumentos ambientales"
+            },
+            {
+              "codigo": "M4.6",
+              "nombre": "Gestion prospectiva"
+            },
+            {
+              "codigo": "M4.7",
+              "nombre": "Gestion Reactiva"
+            },
+            {
+              "codigo": "M4.8",
+              "nombre": "Gestion correctiva"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "apoyo",
+      "titulo": "Procesos de Apoyo",
+      "codigo": "S",
+      "clase": "apoyo",
+      "procesos": [
+        {
+          "codigo": "S1",
+          "nombre": "Gestion del Recurso Humano",
+          "nivel1": [
+            {
+              "codigo": "S1.1",
+              "nombre": "Planificacion de Recursos Humanos"
+            },
+            {
+              "codigo": "S1.2",
+              "nombre": "Organizacion y distribucion del trabajo"
+            },
+            {
+              "codigo": "S1.3",
+              "nombre": "Gestion de la incorporacion"
+            },
+            {
+              "codigo": "S1.4",
+              "nombre": "Administracion de las personas"
+            },
+            {
+              "codigo": "S1.5",
+              "nombre": "Gestion de la compensacion"
+            },
+            {
+              "codigo": "S1.6",
+              "nombre": "Gestion del rendimiento"
+            },
+            {
+              "codigo": "S1.7",
+              "nombre": "Gestion del desarrollo y la capacitacion"
+            },
+            {
+              "codigo": "S1.8",
+              "nombre": "Gestion de relaciones humanas y sociales"
+            }
+          ]
+        },
+        {
+          "codigo": "S2",
+          "nombre": "Gestion Contable y Financiera",
+          "nivel1": [
+            {
+              "codigo": "S2.1",
+              "nombre": "Gestion contable"
+            },
+            {
+              "codigo": "S2.2",
+              "nombre": "Gestion financiera"
+            }
+          ]
+        },
+        {
+          "codigo": "S3",
+          "nombre": "Gestion de Bienes y Servicios",
+          "nivel1": [
+            {
+              "codigo": "S3.1",
+              "nombre": "Programacion de bienes y servicios"
+            },
+            {
+              "codigo": "S3.2",
+              "nombre": "Contratacion de bienes y servicios"
+            },
+            {
+              "codigo": "S3.3",
+              "nombre": "Control y distribucion de bienes"
+            },
+            {
+              "codigo": "S3.4",
+              "nombre": "Administracion de bienes"
+            }
+          ]
+        },
+        {
+          "codigo": "S4",
+          "nombre": "Gestion de las Inversiones",
+          "nivel1": [
+            {
+              "codigo": "S4.1",
+              "nombre": "Formulacion y evaluacion de programa/proyectos de inversion y registro y aprobacion de IOARR"
+            },
+            {
+              "codigo": "S4.2",
+              "nombre": "Elaboracion del Expediente tecnico, documento equivalente y/o Especificaciones Tecnicas"
+            },
+            {
+              "codigo": "S4.3",
+              "nombre": "Ejecucion de la inversion"
+            },
+            {
+              "codigo": "S4.4",
+              "nombre": "Liquidacion, transferencia y cierre de inversion"
+            },
+            {
+              "codigo": "S4.5",
+              "nombre": "Funcionamiento - OPMI"
+            }
+          ]
+        },
+        {
+          "codigo": "S5",
+          "nombre": "Gestion de Transformacion Digital",
+          "nivel1": [
+            {
+              "codigo": "S5.1",
+              "nombre": "Gestion de planes en tecnologias de la informacion"
+            },
+            {
+              "codigo": "S5.2",
+              "nombre": "Desarrollo e Implementacion de Servicios Digitales"
+            },
+            {
+              "codigo": "S5.3",
+              "nombre": "Asistencia de infraestructura tecnologica"
+            }
+          ]
+        },
+        {
+          "codigo": "S6",
+          "nombre": "Gestion de Asuntos Legales",
+          "nivel1": [
+            {
+              "codigo": "S6.1",
+              "nombre": "Asesoramiento juridico"
+            },
+            {
+              "codigo": "S6.2",
+              "nombre": "Proyeccion y/o visacion de actos resolutivos"
+            }
+          ]
+        },
+        {
+          "codigo": "S7",
+          "nombre": "Gestion de Archivo",
+          "nivel1": [
+            {
+              "codigo": "S7.1",
+              "nombre": "Organizacion documental"
+            },
+            {
+              "codigo": "S7.2",
+              "nombre": "Descripcion documental"
+            },
+            {
+              "codigo": "S7.3",
+              "nombre": "Conservacion documental"
+            },
+            {
+              "codigo": "S7.4",
+              "nombre": "Gestion del acceso a la informacion de los fondos documentales"
+            },
+            {
+              "codigo": "S7.5",
+              "nombre": "Eliminacion de la documentacion"
+            },
+            {
+              "codigo": "S7.6",
+              "nombre": "Supervision y monitoreo archivistico"
+            },
+            {
+              "codigo": "S7.7",
+              "nombre": "Fortalecimiento de capacidades"
+            }
+          ]
+        },
+        {
+          "codigo": "S8",
+          "nombre": "Gestion de Transparencia y Atencion al Ciudadano",
+          "nivel1": [
+            {
+              "codigo": "S8.1",
+              "nombre": "Registro y emision de resoluciones"
+            },
+            {
+              "codigo": "S8.2",
+              "nombre": "Transcripcion y notificacion de resolucion"
+            },
+            {
+              "codigo": "S8.3",
+              "nombre": "Registro y/o actualizacion del portal institucional / transparencia"
+            },
+            {
+              "codigo": "S8.4",
+              "nombre": "Atencion de solicitud de informacion publica"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
