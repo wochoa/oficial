@@ -203,6 +203,7 @@ export default {
 /* Contenedor del Logo */
 .banner-logo img {
   max-height: 90px; /* Ajusta según el tamaño de tu logo */
+  background-color: #fff;
   width: auto;
   display: block;
 }
