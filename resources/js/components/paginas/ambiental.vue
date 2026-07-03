@@ -206,6 +206,7 @@ export default {
   background-color: #fff;
   width: auto;
   display: block;
+  border-radius: 45px;
 }
 
 /* Caja de texto con el efecto translúcido */
