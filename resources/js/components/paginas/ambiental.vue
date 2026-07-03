@@ -21,11 +21,14 @@
     <div class="container pt-3">
 
       <!-- Banner -->
-      <div class="banner-section mb-4">
-        <div class="banner-icon">🌿</div>
-        <div>
-          <h2 class="fw-bold">GERENCIA DE RECURSOS NATURALES</h2>
-          <p class="mb-0">Gestión y conservación de los recursos naturales para un Huánuco sostenible.</p>
+      <div class="banner-container mb-4">
+        <div class="banner-logo">
+          <img src="/img/logogrn.png" alt="Logo GRRNGA" />
+        </div>
+
+        <div class="banner-text-box">
+          <h2 class="banner-title">GERENCIA DE RECURSOS NATURALES Y GESTIÓN AMBIENTAL</h2>
+          <p class="banner-subtitle">Gestión y conservación de los recursos naturales para un Huánuco sostenible.</p>
         </div>
       </div>
 
@@ -45,7 +48,8 @@
                 <ul class="list-group list-group-flush">
                   <!-- Mostramos la página a partir de la relación del submenú (submenu.pagina) -->
                   <li class="list-group-item" v-for="submenu in menu.submenus" :key="submenu.idsubmenu">
-                    <a href="#" class="text-decoration-none text-success" v-if="submenu.pagina" @click.prevent="seleccionarPagina(submenu.pagina)">
+                    <a href="#" class="text-decoration-none text-success" v-if="submenu.pagina"
+                      @click.prevent="seleccionarPagina(submenu.pagina)">
                       {{ submenu.pagina.nom_pagina }}
                     </a>
                   </li>
@@ -53,7 +57,7 @@
               </div>
             </div>
 
-            
+
           </div>
         </div>
 
@@ -70,7 +74,7 @@
           </div>
         </div>
 
-        
+
       </div>
 
     </div>
@@ -92,24 +96,24 @@ export default {
     }
   },
   created() {
-     this.cargardatos();
+    this.cargardatos();
   },
   mounted() {
   },
   methods: {
     cargardatos() {
-       var url='/api/gesambiental';
-           axios.get(url)
-                .then(response=>{
-                  this.info=response.data.pagina[0];
-                  this.menus=response.data.menus;
-                  
-                  if (this.menus.length > 0 && this.menus[0].submenus.length > 0 && this.menus[0].submenus[0].pagina) {
-                    this.paginaSeleccionada = this.menus[0].submenus[0].pagina;
-                  } else {
-                    this.paginaSeleccionada = this.info; // Fallback a la página principal si no hay submenús
-                  }
-                });
+      var url = '/api/gesambiental';
+      axios.get(url)
+        .then(response => {
+          this.info = response.data.pagina[0];
+          this.menus = response.data.menus;
+
+          if (this.menus.length > 0 && this.menus[0].submenus.length > 0 && this.menus[0].submenus[0].pagina) {
+            this.paginaSeleccionada = this.menus[0].submenus[0].pagina;
+          } else {
+            this.paginaSeleccionada = this.info; // Fallback a la página principal si no hay submenús
+          }
+        });
     },
     seleccionarPagina(pagina) {
       this.paginaSeleccionada = pagina;
@@ -180,5 +184,66 @@ export default {
   background-color: #fff3cd;
   padding: 10px;
   border-radius: 6px;
+}
+
+/* Contenedor principal del Banner */
+.banner-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-image: url('/img/fondo.png'); /* Asegúrate de que la ruta a tu fondo sea correcta */
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px; /* Esquinas redondeadas como la imagen */
+  padding: 25px 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* Contenedor del Logo */
+.banner-logo img {
+  max-height: 90px; /* Ajusta según el tamaño de tu logo */
+  width: auto;
+  display: block;
+}
+
+/* Caja de texto con el efecto translúcido */
+.banner-text-box {
+  background-color: rgba(255, 255, 255, 0.5); /* Capa blanca semi-transparente */
+  backdrop-filter: blur(2px); /* Opcional: Le da un toque moderno difuminando levemente el fondo */
+  padding: 15px 20px;
+  border-radius: 8px;
+  flex: 1;
+}
+
+/* Título Principal */
+.banner-title {
+  color: #0d47a1; /* Cambia al color exacto de tu diseño si no es este azul/verde oscuro */
+  color: #0a3d1e; /* Color verde oscuro similar al de la imagen */
+  font-weight: 800;
+  font-size: 1.6rem;
+  margin-bottom: 5px;
+  letter-spacing: -0.5px;
+}
+
+/* Subtítulo */
+.banner-subtitle {
+  color: #1b5e20; /* Verde para el subtítulo */
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+/* Responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .banner-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .banner-title {
+    font-size: 1.3rem;
+  }
 }
 </style>
