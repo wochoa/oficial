@@ -16,6 +16,7 @@
         {
           "codigo": "E1",
           "nombre": "Direccionamiento Estratégico",
+          "pdfUrl": "https://nextcloud.regionhuanuco.gob.pe/s/E6AfzSPskCY7YTt?dir=/&editing=false&openfile=true",
           "ficha": {
             "version": "3.0",
             "tipo": "Estrategico",
@@ -182,6 +183,13 @@
         {
           "codigo": "E2",
           "nombre": "Gestion del Desarrollo y Modernizacion Institucional",
+          "pdfUrl": "https://nextcloud.regionhuanuco.gob.pe/s/ng5WGkd6RfeFzXR?dir=/&editing=false&openfile=true",
+          "ficha": {
+            "objetivo": "Mejorar los niveles de calidad organizacional sobre la base de procesos a nivel institucional, formalizando con instrumentos técnicos normativos de gestión y documentos de gestión.",
+            "dueno": [
+              "Sub Gerencia de Modernización y Transformación Digital"
+            ]
+          },
           "nivel1": [
             {
               "codigo": "E2.1",
@@ -200,6 +208,17 @@
         {
           "codigo": "E3",
           "nombre": "Gestion de Alianzas y Posicionamiento Institucional",
+          "pdfUrl": "https://nextcloud.regionhuanuco.gob.pe/s/43cjgiPLkJNzWbp?openfile=true",
+          "ficha": {
+            "objetivo": "Establecer y extender los vínculos y relaciones institucionales a nivel regional, nacional e internacional mediante convenios, memorándum y/o carta de entendimiento. Así mismo gestionar la comunicación de manera eficiente y eficaz para el posicionamiento institucional a través de la comunicación interna y externa.",
+            "dueno": [
+              "Gerencia General Regional",
+              "Oficina de Comunicaciones, Imagen y Protocolo",
+              "Oficina Regional de Cooperación Internacional",
+              "Sub Gerencia de Planeamiento Estratégico",
+              "Sub Gerencia de Modernización y Transformación Digital"
+            ]
+          },
           "nivel1": [
             {
               "codigo": "E3.1",
@@ -218,6 +237,13 @@
         {
           "codigo": "E4",
           "nombre": "Gestion del Sistema de Control Interno y la Integridad Institucional",
+          "pdfUrl": "https://nextcloud.regionhuanuco.gob.pe/s/PQkWxSr23Bt85Y6?dir=/&editing=false&openfile=true",
+          "ficha": {
+            "objetivo": "Implementar normas y procedimientos de gestión permanente, que contribuya al cumplimiento de los objetivos institucionales y promueva una gestión eficaz, eficiente, íntegra y transparente.",
+            "dueno": [
+              "Gerencia General Regional"
+            ]
+          },
           "nivel1": [
             {
               "codigo": "E4.1",
@@ -252,6 +278,20 @@
         {
           "codigo": "M1",
           "nombre": "Gestion del Desarrollo Social",
+          "pdfUrl": "https://nextcloud.regionhuanuco.gob.pe/s/sPXg2pPyw9ADbXs?dir=/&editing=false&openfile=true",
+          "ficha": {
+            "objetivo": "Elaborar, implementar, gestionar, supervisar y evaluar las políticas públicas regionales de desarrollo social, en materia de educación, salud, vivienda y saneamiento, trabajo y promoción del empleo, mediante la articulación intergubernamental e intersectorial con un enfoque territorial de protección, inclusión e inversión social con el fin de mejorar la calidad de vida y la seguridad ciudadana.",
+            "dueno": [
+              "Gerencia Regional de Desarrollo Social",
+              "Dirección Regional de Salud",
+              "Dirección Regional de Educación",
+              "Dirección Regional de Trabajo y Promoción del Empleo",
+              "Dirección Regional de Vivienda, Construcción y Saneamiento",
+              "Oficina regional de gestión de riesgos de desastres, defensa nacional y seguridad ciudadana",
+              "Oficina regional de gestión de conflictos y diálogo",
+              "Aldea infantil SAN JUAN BOSCO"
+            ]
+          },
           "nivel1": [
             {
               "codigo": "M1.1",
@@ -278,6 +318,11 @@
         {
           "codigo": "M2",
           "nombre": "Gestion de la Competitividad Economica y Productiva",
+          "pdfUrl": "https://nextcloud.regionhuanuco.gob.pe/s/JWctHzybe6HRD85?dir=/&editing=false&openfile=true",
+          "ficha": {
+            "objetivo": "Impulsar el desarrollo económico y sostenible de la Región Huánuco, a través del fomento agrario, productivo, empresarial, turístico, minero y energético.",
+            "dueno": ["Gerencia Regional de Desarrollo Económico", "Sub Gerencia de Desarrollo Económico, Productivo e Innovación Tecnológica", "Sub Gerencia de Promoción Empresarial y Finanzas", "Dirección Regional de Agricultura", "Dirección Regional de Producción", "Dirección Regional de Comercio Exterior y Turismo", "Dirección Regional de Energía, Minas e Hidrocarburos"]
+          },
           "nivel1": [
             {
               "codigo": "M2.1",
@@ -300,6 +345,11 @@
         {
           "codigo": "M3",
           "nombre": "Integracion Territorial Regional",
+          "pdfUrl": "https://nextcloud.regionhuanuco.gob.pe/s/JDBpHisqDwZfZLt?dir=/&editing=false&openfile=true",
+          "ficha": {
+            "objetivo": "Conducir los procesos de demarcación y ordenamiento territorial, y la infraestructura vial y de datos espaciales a nivel interdepartamental, además de reducir la inseguridad en el sistema de transporte e incrementar la inversión en infraestructura de telecomunicaciones en el ámbito de su competencia.",
+            "dueno": ["Sub Gerencia de Acondicionamiento Territorial", "Dirección Regional de Transportes y Comunicaciones"]
+          },
           "nivel1": [
             {
               "codigo": "M3.1",
@@ -338,6 +388,11 @@
         {
           "codigo": "M4",
           "nombre": "Gestion Ambiental y de Riesgo de Desastres",
+          "pdfUrl": "https://nextcloud.regionhuanuco.gob.pe/s/bW3wX8pcsneGmZd?dir=/&editing=false&openfile=true",
+          "ficha": {
+            "objetivo": "Recuperar y conservar la calidad ambiental en forma sostenible para el aprovechamiento de los recursos naturales y la biodiversidad con la finalidad de identificar y reducir los riesgos asociados a peligros frente al cambio climático, en forma articulada con los instrumentos de gestión.",
+            "dueno": ["Gerencia Regional de Recursos Naturales y Gestión del Medio Ambiente", "Sub Gerencia de Recursos Naturales", "Sub Gerencia de Gestión Ambiental", "Oficina Regional de Gestión de Riesgo de Desastres, Defensa Nacional y Seguridad Ciudadana"]
+          },
           "nivel1": [
             {
               "codigo": "M4.1",
@@ -384,6 +439,11 @@
         {
           "codigo": "S1",
           "nombre": "Gestion del Recurso Humano",
+          "pdfUrl": "https://nextcloud.regionhuanuco.gob.pe/s/tL6zpTgPHX2Pybw?dir=/&editing=false&openfile=true",
+          "ficha": {
+            "objetivo": "Garantizar y fortalecer el desarrollo del capital humano en conformidad con las normativas vigentes para el logro de los objetivos institucionales del Gobierno Regional Huánuco.",
+            "dueno": ["Sub Gerencia de Gestión de Recursos Humanos"]
+          },
           "nivel1": [
             {
               "codigo": "S1.1",
@@ -422,6 +482,11 @@
         {
           "codigo": "S2",
           "nombre": "Gestion Contable y Financiera",
+          "pdfUrl": "https://nextcloud.regionhuanuco.gob.pe/s/HyNZHgYcj4KWXwE?dir=/&editing=false&openfile=true",
+          "ficha": {
+            "objetivo": "Administrar y controlar los recursos financieros de acuerdo a la normatividad vigente, para el cumplimiento de los objetivos institucionales establecidos por el Gobierno Regional Huánuco.",
+            "dueno": ["Gerencia Regional de Administración", "Sub Gerencia de Contabilidad", "Sub Gerencia de Tesorería"]
+          },
           "nivel1": [
             {
               "codigo": "S2.1",
@@ -436,6 +501,11 @@
         {
           "codigo": "S3",
           "nombre": "Gestion de Bienes y Servicios",
+          "pdfUrl": "https://nextcloud.regionhuanuco.gob.pe/s/5Qb78x4P7YEfjbN?dir=/&editing=false&openfile=true",
+          "ficha": {
+            "objetivo": "Asegurar la gestión eficiente, eficaz y racional de la adquisición de bienes y servicios, así como la administración de los bienes patrimoniales para el adecuado uso en el GRH.",
+            "dueno": ["Gerencia Regional de Administración", "Sub Gerencia de abastecimiento", "Sub Gerencia de Patrimonio"]
+          },
           "nivel1": [
             {
               "codigo": "S3.1",
@@ -458,6 +528,11 @@
         {
           "codigo": "S4",
           "nombre": "Gestion de las Inversiones",
+          "pdfUrl": "https://nextcloud.regionhuanuco.gob.pe/s/i7ATRWfT2nRpcSc?dir=/&editing=false&openfile=true",
+          "ficha": {
+            "objetivo": "Determinar el uso adecuado de los recursos públicos destinados a la inversión para la efectiva prestación de servicios y la provisión de la infraestructura necesaria en el plazo previsto alineado al cierre de brechas.",
+            "dueno": ["Gerencia Regional de Infraestructura", "Sub Gerencia de Estudios", "Sub Gerencia de Gestión de Obras y Supervisión", "Sub Gerencia de Liquidación", "Gerencia Regional de Planeamiento y Presupuesto y Acondicionamiento Territorial", "Sub Gerencia de Formulación y Evaluación de Estudios de Pre-Inversión", "Sub Gerencia de Programación Multianual de Inversiones", "Gerencia Regional de Recursos Naturales y Gestión Ambiental", "Sub Gerencia de Recursos Naturales", "Sub Gerencia de Gestión Ambiental", "Gerencia Regional de Desarrollo Económico", "Sub Gerencia de la Inversión Privada Sostenible", "Dirección Regional de Transportes y Comunicaciones", "Dirección Regional de Vivienda, Construcción y Saneamiento", "Dirección Regional de Salud", "Dirección Regional de Agricultura", "Dirección Regional de Energía y Minas"]
+          },
           "nivel1": [
             {
               "codigo": "S4.1",
@@ -484,6 +559,11 @@
         {
           "codigo": "S5",
           "nombre": "Gestion de Transformacion Digital",
+          "pdfUrl": "https://nextcloud.regionhuanuco.gob.pe/s/B8JeZzPQFw9fW3f?dir=/&editing=false&openfile=true",
+          "ficha": {
+            "objetivo": "Garantizar la modernización de la gestión institucional, en base a las normas de gobernanza, gestión e implementación digital.",
+            "dueno": ["Sub Gerencia de Modernización y Transformación Digital"]
+          },
           "nivel1": [
             {
               "codigo": "S5.1",
@@ -502,6 +582,11 @@
         {
           "codigo": "S6",
           "nombre": "Gestion de Asuntos Legales",
+          "pdfUrl": "https://nextcloud.regionhuanuco.gob.pe/s/wddxpxokCed7zMF?dir=/&editing=false&openfile=true",
+          "ficha": {
+            "objetivo": "Brindar asesoramiento jurídico y administrativo del Gobierno Regional Huánuco para coadyuvar la defensa oportuna y eficaz de los intereses del estado evitando perjuicios.",
+            "dueno": ["Gerencia Regional de Asesoría Jurídica"]
+          },
           "nivel1": [
             {
               "codigo": "S6.1",
@@ -516,6 +601,11 @@
         {
           "codigo": "S7",
           "nombre": "Gestion de Archivo",
+          "pdfUrl": "https://nextcloud.regionhuanuco.gob.pe/s/qRsZxNn5sDeC4C7?dir=/&editing=false&openfile=true",
+          "ficha": {
+            "objetivo": "Garantizar que los archivos del Gobierno Regional Huánuco se gestionen de manera eficiente y que estén disponibles cuando se requieran.",
+            "dueno": ["Archivo Regional de Huánuco"]
+          },
           "nivel1": [
             {
               "codigo": "S7.1",
@@ -550,6 +640,11 @@
         {
           "codigo": "S8",
           "nombre": "Gestion de Transparencia y Atencion al Ciudadano",
+          "pdfUrl": "https://nextcloud.regionhuanuco.gob.pe/s/apfdNA9GfnpAWoc?dir=/&editing=false&openfile=true",
+          "ficha": {
+            "objetivo": "Garantizar el derecho de acceso a la información pública velando por su accesibilidad, exigibilidad y disponibilidad, fiscalizando el cumplimiento de la transparencia a través de los medios y procedimientos que establezcan las normativas aplicables.",
+            "dueno": ["Oficina de Atención al Ciudadano y Gestión Documental", "Sub Gerencia de Modernización y Transformación Digital"]
+          },
           "nivel1": [
             {
               "codigo": "S8.1",
