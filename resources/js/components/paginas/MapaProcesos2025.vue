@@ -75,8 +75,7 @@
             <h2>{{ procesoSeleccionado.nombre }}</h2>
             <div class="detalle-acciones">
               <button v-if="mostrarFichaCompleta" type="button" @click="fichaAbierta = true">Ver ficha</button>
-              <a v-if="tienePdfProceso" :
-              href="urlPdfProceso" target="_blank" rel="noopener">Abrir PDF</a>
+              <a v-if="tienePdfProceso" :href="urlPdfProceso" target="_blank" rel="noopener">Abrir PDF</a>
             </div>
           </div>
         </div>
@@ -103,7 +102,7 @@
           <h3>Procesos de Nivel 1</h3>
           <div class="nivel-uno-grid">
             <router-link
-              v-for="item in procesoSeleccionado.nivel1"
+              v-for="item in procesosNivelUno"
               :key="item.codigo"
               :to="rutaSubproceso(procesoSeleccionado, item)"
               :class="['nivel-uno-item', { activo: subprocesoSeleccionado && subprocesoSeleccionado.codigo === item.codigo }]"
@@ -282,7 +281,7 @@
           <h3>Procesos de Nivel 1</h3>
           <div class="nivel-uno-grid">
             <router-link
-              v-for="item in procesoSeleccionado.nivel1"
+              v-for="item in procesosNivelUno"
               :key="item.codigo"
               :to="rutaSubproceso(procesoSeleccionado, item)"
               :class="['nivel-uno-item', { activo: subprocesoSeleccionado && subprocesoSeleccionado.codigo === item.codigo }]"
@@ -429,7 +428,7 @@ export default {
         return null;
       }
 
-      return this.procesoSeleccionado.nivel1.find(item => {
+      return this.procesosNivelUno.find(item => {
         return item.codigo === this.$route.params.subcodigo;
       }) || null;
     },

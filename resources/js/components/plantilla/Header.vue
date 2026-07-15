@@ -7,8 +7,7 @@
                 </a> -->
                 <router-link to="/" class="navbar-brand" >
                   <!-- <img :src="ruta+'./../img/logo.png'" alt="" height="40"> -->
-                  <img v-if="$attrs.thema.tmlogo_tema" :src="'http://gestionportales.regionhuanuco.gob.pe/storage/'+recorta_cad($attrs.thema.tmlogo_tema)" height="60">
-                  <img v-else src="/img/logooficial.png" height="60">
+                  <img :src="'http://gestionportales.regionhuanuco.gob.pe/storage/'+recorta_cad($attrs.thema.tmlogo_tema)" height="60">
                </router-link>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -84,26 +83,14 @@ import axios from "axios";
        this.cargamenus();
      },
      methods: {
-	       cargamenus(){
-	         var url='/api/menus';
-	         axios.get(url)
-	              .then(response=>{
-	                this.listamenus=response.data.menus && response.data.menus.length ? response.data.menus : this.menusPorDefecto();
-	                this.listasubmenus=response.data.submenus || [];
-	              })
-	              .catch(() => {
-	                this.listamenus = this.menusPorDefecto();
-	                this.listasubmenus = [];
-	              });
-	       },
-	       menusPorDefecto() {
-	         return [
-	           { idmenus: 1, nom_menu: 'Inicio', link_menu: '/' },
-	           { idmenus: 2, nom_menu: 'Mapa de procesos', link_menu: '/mapa-procesos-2025' },
-	           { idmenus: 3, nom_menu: 'Convocatoria', link_menu: '/lconvocatorias' },
-	           { idmenus: 4, nom_menu: 'Transparencia', link_menu: 'https://www.transparencia.gob.pe/' }
-	         ];
-	       },
+       cargamenus(){
+         var url='/api/menus';
+         axios.get(url)
+              .then(response=>{
+                this.listamenus=response.data.menus;
+                this.listasubmenus=response.data.submenus;
+              });
+       },
        recorta_cad(texto) {
             var substr = (texto || '').substr(7);
             return substr;

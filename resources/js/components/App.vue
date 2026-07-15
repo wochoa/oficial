@@ -28,7 +28,7 @@ export default {
     data() {
         return {
 
-            temas: this.temaPorDefecto(),
+            temas: {},
         }
     },
     created() {
@@ -41,19 +41,8 @@ export default {
             var url = '/api/tema';
             axios.get(url)
                 .then(response => {
-                    this.temas = response.data.tema || this.temaPorDefecto();
-                })
-                .catch(() => {
-                    this.temas = this.temaPorDefecto();
+                    this.temas = response.data.tema;
                 });
-        },
-        temaPorDefecto() {
-            return {
-                tmcolor_tema: '#169b62',
-                tmlogo_tema: '',
-                tmredes_linkface: 'https://www.facebook.com/GobiernoRegionalHuanuco',
-                nombredireccionweb: 'Gobierno Regional Huanuco'
-            }
         }
     },
 
