@@ -340,8 +340,14 @@ class Paginasweb extends Controller
             return response()->json(['message' => 'Proceso de normatividad no encontrado.'], 404);
         }
 
+        $tipos = collect(explode(',', (string) $request->input('regulations_tipo')))
+            ->map(static function ($tipo) {
+                return trim($tipo);
+            })
+            ->filter()
+            ->values();
+
         $filtros = array_filter([
-            'regulations_tipo' => $request->input('regulations_tipo'),
             'reg_year' => $request->input('reg_year'),
             'magic' => $request->input('magic'),
             'with' => 'files',
@@ -349,18 +355,28 @@ class Paginasweb extends Controller
         ], static function ($value) {
             return $value !== null && $value !== '';
         });
-        $directasResponse = Http::get('https://proyectos.regionhuanuco.gob.pe/regulations', array_merge($filtros, [
-            'reg_process_id' => $proceso['id'],
-        ]));
-        $directas = $this->responseData($directasResponse->json());
+        $consultas = $tipos->isNotEmpty() ? $tipos : collect([null]);
 
         $documentos = [];
-        foreach ($directas as $documento) {
-            if (!is_array($documento) || !isset($documento['id'])) {
-                continue;
+        foreach ($consultas as $tipo) {
+            $parametros = array_merge($filtros, [
+                'reg_process_id' => $proceso['id'],
+            ]);
+
+            if ($tipo) {
+                $parametros['regulations_tipo'] = $tipo;
             }
-            $documento['relacion_proceso'] = 'directa';
-            $documentos[$documento['id']] = $documento;
+
+            $directasResponse = Http::get('https://proyectos.regionhuanuco.gob.pe/regulations', $parametros);
+            $directas = $this->responseData($directasResponse->json());
+
+            foreach ($directas as $documento) {
+                if (!is_array($documento) || !isset($documento['id'])) {
+                    continue;
+                }
+                $documento['relacion_proceso'] = 'directa';
+                $documentos[$documento['id']] = $documento;
+            }
         }
 
         $documentos = array_values($documentos);
