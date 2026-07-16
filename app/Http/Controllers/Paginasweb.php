@@ -326,6 +326,89 @@ class Paginasweb extends Controller
         return http::get('https://proyectos.regionhuanuco.gob.pe/regulations', $request->toArray())->json($key = null, $default = null);
     }
 
+    public function processRegulations(Request $request, $codigo)
+    {
+        $codigo = strtoupper(trim($codigo));
+        $procesosResponse = Http::get('https://proyectos.regionhuanuco.gob.pe/regulations/processes', [
+            'proc_codigo' => $codigo,
+            'activo' => 1,
+        ]);
+        $procesos = $this->responseData($procesosResponse->json());
+        $proceso = collect($procesos)->firstWhere('proc_codigo', $codigo);
+
+        if (!$proceso) {
+            return response()->json(['message' => 'Proceso de normatividad no encontrado.'], 404);
+        }
+
+        $tipos = collect(explode(',', (string) $request->input('regulations_tipo')))
+            ->map(static function ($tipo) {
+                return trim($tipo);
+            })
+            ->filter()
+            ->values();
+
+        $filtros = array_filter([
+            'reg_year' => $request->input('reg_year'),
+            'magic' => $request->input('magic'),
+            'with' => 'files',
+            'orders' => $request->input('orders', ['reg_date.desc']),
+        ], static function ($value) {
+            return $value !== null && $value !== '';
+        });
+        $consultas = $tipos->isNotEmpty() ? $tipos : collect([null]);
+
+        $documentos = [];
+        foreach ($consultas as $tipo) {
+            $parametros = array_merge($filtros, [
+                'reg_process_id' => $proceso['id'],
+            ]);
+
+            if ($tipo) {
+                $parametros['regulations_tipo'] = $tipo;
+            }
+
+            $directasResponse = Http::get('https://proyectos.regionhuanuco.gob.pe/regulations', $parametros);
+            $directas = $this->responseData($directasResponse->json());
+
+            foreach ($directas as $documento) {
+                if (!is_array($documento) || !isset($documento['id'])) {
+                    continue;
+                }
+                $documento['relacion_proceso'] = 'directa';
+                $documentos[$documento['id']] = $documento;
+            }
+        }
+
+        $documentos = array_values($documentos);
+        usort($documentos, static function ($primero, $segundo) {
+            return strcmp($segundo['reg_date'] ?? '', $primero['reg_date'] ?? '');
+        });
+
+        $porPagina = min(max((int) $request->input('paginate', 20), 1), 50);
+        $total = count($documentos);
+        $ultimaPagina = max((int) ceil($total / $porPagina), 1);
+        $pagina = min(max((int) $request->input('page', 1), 1), $ultimaPagina);
+
+        return response()->json([
+            'data' => array_slice($documentos, ($pagina - 1) * $porPagina, $porPagina),
+            'current_page' => $pagina,
+            'last_page' => $ultimaPagina,
+            'per_page' => $porPagina,
+            'total' => $total,
+        ]);
+    }
+
+    private function responseData($response)
+    {
+        if (!is_array($response)) {
+            return [];
+        }
+
+        return isset($response['data']) && is_array($response['data'])
+            ? $response['data']
+            : $response;
+    }
+
 
 
     
