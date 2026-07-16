@@ -129,7 +129,7 @@
                 <span>Tipo de documento</span>
                 <select v-model="filtrosNormatividad.tipo" @change="cargarNormatividad()">
                   <option value="">Todos</option>
-                  <option v-for="tipo in tiposNormatividad" :key="tipo.clave" :value="tipo.valor">{{ tipo.etiqueta }}</option>
+                  <option v-for="tipo in tiposNormatividad" :key="tipo.id" :value="tipo.id">{{ etiquetaTipoNormativa(tipo) }}</option>
                 </select>
               </label>
               <label>
@@ -436,41 +436,10 @@ export default {
       return this.normatividad.documentos;
     },
     tiposNormatividad() {
-      const grupos = {
-        instructivo: { clave: 'instructivo', etiqueta: 'Instructivo', ids: [] },
-        directiva: { clave: 'directiva', etiqueta: 'Directiva', ids: [] },
-        directiva20: { clave: 'directiva20', etiqueta: 'Directiva 2.0', ids: [] }
-      };
-
-      this.normatividad.tipos.forEach(tipo => {
+      return this.normatividad.tipos.filter(tipo => {
         const nombre = this.normalizarTipoNormativa(tipo.tip_description);
-        const id = tipo.id;
-
-        if (!id) {
-          return;
-        }
-
-        if (nombre.includes('directiva') && nombre.includes('2.0')) {
-          grupos.directiva20.ids.push(id);
-          return;
-        }
-
-        if (nombre === 'directiva' || nombre === 'directivas') {
-          grupos.directiva.ids.push(id);
-          return;
-        }
-
-        if (nombre.includes('instructivo')) {
-          grupos.instructivo.ids.push(id);
-        }
+        return nombre === 'directiva' || nombre.includes('directiva 2') || nombre.includes('instructivo');
       });
-
-      return [grupos.instructivo, grupos.directiva, grupos.directiva20]
-        .filter(grupo => grupo.ids.length)
-        .map(grupo => ({
-          ...grupo,
-          valor: grupo.ids.join(',')
-        }));
     },
     aniosNormatividad() {
       const anioActual = new Date().getFullYear();
@@ -574,6 +543,16 @@ export default {
     },
     normalizarTipoNormativa(tipo) {
       return String(tipo || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+    },
+    etiquetaTipoNormativa(tipo) {
+      const nombre = this.normalizarTipoNormativa(tipo.tip_description);
+      if (nombre.includes('directiva 2')) {
+        return 'Directiva 2.0';
+      }
+      if (nombre.includes('instructivo')) {
+        return 'Instructivo';
+      }
+      return 'Directiva';
     },
     registrarDiagrama(src, cargado) {
       this.$set(this.diagramasCargados, src, cargado);
