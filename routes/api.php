@@ -36,6 +36,7 @@ route::get('/normatividad/{text?}/{anio?}/{siglas?}/{descripcion?}/{bus?}',[Pagi
 
 route::get('tipodoc',[Paginasweb::class,'tipodoc'])->name('tipodoc');
 route::get('regulations',[Paginasweb::class,'regulations'])->name('regulations');
+route::get('process-regulations/{codigo}',[Paginasweb::class,'processRegulations'])->name('process-regulations');
 
 
 route::get('directorio/{dir?}',[Paginasweb::class,'directorio'])->name('directorio');//directorio
