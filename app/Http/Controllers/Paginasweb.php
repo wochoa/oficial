@@ -130,17 +130,27 @@ class Paginasweb extends Controller
         $iddireccionweb=$portalesweb;//id de pagina web
 
         $publicacion=DB::table('videos')->where(['estado'=>1,'iddirecciones_web'=>$iddireccionweb])->orderBy('id','DESC')->limit(8)->get();
+        
+        $datos = [];
         for($i=0;$i<count($publicacion);$i++)
         {
-            // $imagen=substr($publicacion[$i]->img1,7);
-            $titulo=html_entity_decode($publicacion[$i]->titulo);//utf8_decode($publicacion[$i]->titulo);
+            $titulo=html_entity_decode($publicacion[$i]->titulo);
             $url=html_entity_decode($publicacion[$i]->url);
-            $idvideo = explode("=", $url);
+            
+            $idvideo = '';
+            if (preg_match('%(?:youtube(?:-nocookie)?\.com/(?:[^/]+/.+/|(?:v|e(?:mbed)?)/|.*[?&]v=)|youtu\.be/)([^"&?/ ]{11})%i', $url, $match)) {
+                $idvideo = $match[1];
+            }
 
-            $datos[]=array('id'=>$publicacion[$i]->id,'titulo'=>$titulo,'url'=>$url,'idvideo'=>$idvideo[1],'fecha'=>$publicacion[$i]->created_at);
+            $datos[]=array(
+                'id'=>$publicacion[$i]->id,
+                'titulo'=>$titulo,
+                'url'=>$url,
+                'idvideo'=>$idvideo,
+                'fecha'=>$publicacion[$i]->created_at
+            );
         }
 
-        //$datos=$this->convert_from_latin1_to_utf8_recursively($datos);
         return response()->json(['listavideos'=>$datos],200, ['Content-Type' => 'application/json;charset=UTF-8', 'Charset' => 'utf-8'],
         JSON_UNESCAPED_UNICODE);
     }
